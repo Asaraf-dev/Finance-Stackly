@@ -143,5 +143,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (fnMktLatestEmptyReset) fnMktLatestEmptyReset.addEventListener('click', fnMktLatestResetAll);
     /*--- Initial State ---*/
     fnMktLatestApply();
+
+    const ssIndBlogReadButtons = document.querySelectorAll(".fn-mkt-latest-image-arrow");
+        if (ssIndBlogReadButtons.length) {
+            ssIndBlogReadButtons.forEach(function (ssButton) {
+                ssButton.addEventListener("click", function (ssEvent) {
+                    ssEvent.preventDefault();
+                    ssEvent.stopPropagation();
+                    window.location.href = "404.html";
+                });
+            });
+        }
 });
 /*--- Latest Market Insights Section End ---*/

@@ -340,7 +340,7 @@
 .fn-ind-solutions-card-top {display:flex;align-items:center;justify-content:space-between;}
 .fn-ind-solutions-card-number {font-size:9px;font-weight:800;color:var(--fn-muted);letter-spacing:.08em;}
 .fn-ind-solutions-card-arrow {display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:9px;background:var(--fn-light);color:var(--fn-muted);font-size:10px;transition:all .3s ease;}
-.fn-ind-solutions-card:hover .fn-ind-solutions-card-arrow {background:var(--fn-primary-light);color:var(--fn-primary-dark);transform:translate(2px,-2px);}
+.fn-ind-solutions-card-arrow:hover {background:var(--fn-primary-light);color:var(--fn-primary-dark);transform:translate(2px,-2px);}
 .fn-ind-solutions-card-icon {display:flex;align-items:center;justify-content:center;width:39px;height:39px;margin-top:17px;border-radius:11px;background:var(--fn-primary-light);color:var(--fn-primary-dark);font-size:15px;}
 .fn-ind-solutions-icon-blue {background:rgba(37,99,235,.09);color:var(--fn-secondary);}
 .fn-ind-solutions-icon-purple {background:rgba(139,92,246,.1);color:var(--fn-accent);}
@@ -356,6 +356,7 @@
 .fn-ind-solutions-bottom-item strong {display:block;font-size:10px;color:var(--fn-heading);}
 .fn-ind-solutions-bottom-item small {display:block;margin-top:2px;font-size:8px;color:var(--fn-muted);}
 .fn-ind-solutions-bottom-divider {width:1px;height:35px;background:var(--fn-border);}
+.fn-ind-solutions-card-arrow{cursor: pointer;}
 @keyframes fnIndSolutionsGrowth {from{width:0}to{width:78%}}
 /*--- Solutions Responsive 1050px ---*/
 @media(max-width:1050px){
@@ -579,7 +580,7 @@
 .fn-ind-why-security strong {margin-top:2px;font-size:9px;color:var(--fn-heading);}
 .fn-ind-why-security-dot {width:7px;height:7px;border-radius:50%;background:var(--fn-primary);box-shadow:0 0 0 5px rgba(22,199,132,.1);animation:fnIndWhyPulse 1.5s infinite;}
 .fn-ind-why-reasons {display:flex;flex-direction:column;gap:10px;}
-.fn-ind-why-item {position:relative;display:grid;grid-template-columns:28px 43px 1fr;gap:12px;align-items:start;padding:18px;border:1px solid var(--fn-border);border-radius:17px;background:var(--fn-white);cursor:pointer;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease;}
+.fn-ind-why-item {position:relative;display:grid;grid-template-columns:28px 43px 1fr;gap:12px;align-items:start;padding:18px;border:1px solid var(--fn-border);border-radius:17px;background:var(--fn-white);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease;}
 .fn-ind-why-item::before {content:"";position:absolute;left:0;top:15px;bottom:15px;width:3px;border-radius:5px;background:var(--fn-primary);transform:scaleY(0);transition:transform .3s ease;}
 .fn-ind-why-item:hover,.fn-ind-why-item.is-active {border-color:rgba(22,199,132,.25);box-shadow:0 18px 38px rgba(7,26,43,.08);transform:translateX(5px);}
 .fn-ind-why-item.is-active {background:#fbfffd;}
@@ -1168,7 +1169,7 @@
 .fn-abt-mission-card-content h3 span {color:var(--fn-primary);}
 .fn-abt-mission-card-vision .fn-abt-mission-card-content h3 span {color:#75a3f5;}
 .fn-abt-mission-card-content p {max-width:490px;margin:17px 0 0;color:#8196a5;font-size:11px;line-height:1.8;}
-.fn-abt-mission-card-footer {position:absolute;z-index:2;left:30px;right:30px;bottom:25px;display:flex;align-items:center;gap:7px;}
+.fn-abt-mission-card-footer {position:relative;z-index:2;display:flex;align-items:center;gap:7px; margin-top: 30px;}
 .fn-abt-mission-card-footer span {padding:6px 9px;border:1px solid rgba(255,255,255,.08);border-radius:50px;color:#7890a0;background:rgba(255,255,255,.03);font-size:10px;}
 .fn-abt-mission-card-glow {position:absolute;width:180px;height:180px;right:-80px;bottom:-100px;border-radius:50%;background:rgba(22,199,132,.13);filter:blur(50px);transition:transform .5s ease;}
 .fn-abt-mission-card-vision .fn-abt-mission-card-glow {background:rgba(37,99,235,.15);}
@@ -1200,7 +1201,7 @@
 .fn-abt-mission {padding:95px 0;}
 .fn-abt-mission-cards {grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr);gap:15px;}
 .fn-abt-mission-card {padding:25px;min-height:390px;}
-.fn-abt-mission-card-footer {left:25px;right:25px;}
+
 }
 /*--- Mission Vision Responsive 991px ---*/
 @media(max-width:991px){
@@ -1224,7 +1225,7 @@
 .fn-abt-mission-card-content {margin-top:35px;}
 .fn-abt-mission-card-content h3 {font-size:26px;}
 .fn-abt-mission-card-content p {font-size:10px;}
-.fn-abt-mission-card-footer {left:22px;right:22px;bottom:22px;}
+
 }
 /*--- Mission Vision Responsive 575px ---*/
 @media(max-width:575px){
@@ -1238,7 +1239,7 @@
 .fn-abt-mission-card-content {margin-top:32px;}
 .fn-abt-mission-card-content h3 {font-size:23px;}
 .fn-abt-mission-card-content p {font-size:10px;line-height:1.75;}
-.fn-abt-mission-card-footer {left:20px;right:20px;bottom:20px;gap:5px;}
+.fn-abt-mission-card-footer {gap:5px;}
 .fn-abt-mission-card-footer span {padding:5px 7px;font-size:10px;}
 .fn-abt-mission-center {min-height:70px;}
 .fn-abt-mission-statement {align-items:flex-start;padding:14px;gap:10px;}
@@ -1788,8 +1789,8 @@
 .fn-srv-overview-service-content span {color:var(--fn-primary-dark);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;}
 .fn-srv-overview-service-content h3 {margin:7px 0 9px;color:var(--fn-heading);font-size:19px;line-height:1.2;letter-spacing:-.025em;font-weight:800;}
 .fn-srv-overview-service-content p {max-width:290px;margin:0;color:var(--fn-text);font-size:10px;line-height:1.7;}
-.fn-srv-overview-service-arrow {position:absolute;right:18px;bottom:17px;display:flex;align-items:center;justify-content:center;width:29px;height:29px;border:1px solid rgba(16,42,67,.08);border-radius:8px;color:#83939e;font-size:11px;transition:all .3s ease;}
-.fn-srv-overview-service:hover .fn-srv-overview-service-arrow {border-color:rgba(22,199,132,.18);background:var(--fn-primary-light);color:var(--fn-primary-dark);transform:translate(2px,-2px);}
+.fn-srv-overview-service-arrow {cursor: pointer;position:absolute;right:18px;bottom:17px;display:flex;align-items:center;justify-content:center;width:29px;height:29px;border:1px solid rgba(16,42,67,.08);border-radius:8px;color:#83939e;font-size:11px;transition:all .3s ease;}
+.fn-srv-overview-service-arrow:hover {border-color:rgba(22,199,132,.18);background:var(--fn-primary-light);color:var(--fn-primary-dark);transform:translate(2px,-2px);}
 /*--- Overview Bottom ---*/
 .fn-srv-overview-bottom {display:flex;align-items:center;justify-content:center;gap:15px;margin-top:30px;}
 .fn-srv-overview-bottom-line {width:100px;height:1px;background:linear-gradient(90deg,transparent,rgba(16,42,67,.1));}
@@ -2352,7 +2353,7 @@
 .fn-mkt-latest-image-wrap:after {content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,26,43,.02),rgba(7,26,43,.3));pointer-events:none;}
 .fn-mkt-latest-image-category {position:absolute;z-index:2;left:12px;top:12px;padding:6px 8px;border:1px solid rgba(255,255,255,.18);border-radius:6px;background:rgba(7,26,43,.68);backdrop-filter:blur(8px);color:var(--fn-white);font-size:10px;font-weight:800;}
 .fn-mkt-latest-image-arrow {position:absolute;z-index:2;right:12px;bottom:12px;display:flex;align-items:center;justify-content:center;width:31px;height:31px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:rgba(7,26,43,.65);backdrop-filter:blur(8px);color:var(--fn-white);font-size:11px;transition:all .3s ease;}
-.fn-mkt-latest-card:hover .fn-mkt-latest-image-arrow {background:var(--fn-primary);border-color:var(--fn-primary);color:var(--fn-dark);transform:translate(2px,-2px);}
+.fn-mkt-latest-image-arrow:hover {cursor: pointer;background:var(--fn-primary);border-color:var(--fn-primary);color:var(--fn-dark);transform:translate(2px,-2px);}
 .fn-mkt-latest-card-content {display:flex;flex-direction:column;flex:1;padding:20px;}
 .fn-mkt-latest-meta {display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--fn-primary-dark);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;}
 .fn-mkt-latest-meta span:last-child {color:var(--fn-muted);font-weight:600;text-transform:none;letter-spacing:0;}

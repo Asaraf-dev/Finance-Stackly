@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
             fnSrvOverviewService.classList.remove('active');
         });
     });
+    const ssIndBlogReadButtons = document.querySelectorAll(".fn-srv-overview-service-arrow");
+        if (ssIndBlogReadButtons.length) {
+            ssIndBlogReadButtons.forEach(function (ssButton) {
+                ssButton.addEventListener("click", function (ssEvent) {
+                    ssEvent.preventDefault();
+                    ssEvent.stopPropagation();
+                    window.location.href = "404.html";
+                });
+            });
+        }
 });
 /*--- Services Overview Section End ---*/
 

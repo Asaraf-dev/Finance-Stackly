@@ -98,11 +98,20 @@ document.addEventListener('DOMContentLoaded', function () {
             fnIndFeatured.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg)';
         });
     }
+    const ssIndBlogReadButtons = document.querySelectorAll(".fn-ind-solutions-card-arrow");
+        if (ssIndBlogReadButtons.length) {
+            ssIndBlogReadButtons.forEach(function (ssButton) {
+                ssButton.addEventListener("click", function (ssEvent) {
+                    ssEvent.preventDefault();
+                    ssEvent.stopPropagation();
+                    window.location.href = "404.html";
+                });
+            });
+        }
 });
 /*--- Financial Solutions Section End ---*/
 
 /*--- Interactive Wealth Growth Section Start ---*/
-/*--- Interactive Wealth Growth ---*/
 document.addEventListener('DOMContentLoaded', function () {
     const fnIndGrowth = document.getElementById('fn-ind-growth');
     if (!fnIndGrowth) return;
@@ -237,17 +246,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         fnIndWhyVisual.addEventListener('mouseleave', function () {
             fnIndWhyCore.style.transform = 'translate3d(0,0,0)';
-        });
-    }
-
-    const ssIndBlogReadButtons = document.querySelectorAll(".fn-ind-why-item");
-    if (ssIndBlogReadButtons.length) {
-        ssIndBlogReadButtons.forEach(function (ssButton) {
-            ssButton.addEventListener("click", function (ssEvent) {
-                ssEvent.preventDefault();
-                ssEvent.stopPropagation();
-                window.location.href = "404.html";
-            });
         });
     }
 });
