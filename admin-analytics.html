@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard | Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!--- Admin Dashboard --->
+    <div class="fn-adm-dashboard" id="fn-adm-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="fn-adm-sidebar-overlay" id="fn-adm-sidebar-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="fn-adm-sidebar" id="fn-adm-sidebar">
+            <div class="fn-adm-sidebar-inner">
+                <!--- Sidebar Header --->
+                <div class="fn-adm-sidebar-header">
+                    <a href="index.html" class="fn-adm-sidebar-brand">
+                        <span class="fn-adm-sidebar-logo"><img src="assets/images/brand-logo.webp" alt="Finance"></span>
+                    </a>
+                    <button type="button" class="fn-adm-sidebar-close" id="fn-adm-sidebar-close"
+                        aria-label="Close Sidebar"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <!--- Mobile Sidebar User --->
+                <div class="fn-adm-sidebar-user">
+                    <div class="fn-adm-sidebar-user-icon"><i class="bi bi-person"></i></div>
+                    <div class="fn-adm-sidebar-user-content">
+                        <span class="fn-adm-sidebar-user-label">Signed In As</span>
+                        <strong id="fn-adm-sidebar-email">admin@example.com</strong>
+                    </div>
+                </div>
+                <!--- Sidebar Navigation --->
+                <nav class="fn-adm-sidebar-nav">
+                    <a href="admin-dashboard.html" class="fn-adm-sidebar-link" data-section="overview">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Overview</span>
+                    </a>
+                    <a href="admin-analytics.html" class="fn-adm-sidebar-link active" data-section="analytics">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-bar-chart-line"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Analytics</span>
+                    </a>
+                    <a href="admin-solutions.html" class="fn-adm-sidebar-link" data-section="solutions">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-stars"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Solutions</span>
+                    </a>
+                    <a href="admin-profile.html" class="fn-adm-sidebar-link" data-section="profile">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Profile</span>
+                    </a>
+                    <a href="login.html" class="fn-adm-sidebar-link fn-adm-sidebar-logout" id="fn-adm-logout">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Logout</span>
+                    </a>
+                </nav>
+                <!--- Sidebar Footer --->
+                <div class="fn-adm-sidebar-footer">
+                    <span class="fn-adm-sidebar-status"><i></i> Secure Session</span>
+                    <span class="fn-adm-sidebar-version">Finance Platform</span>
+                </div>
+            </div>
+        </aside>
+        <!--- Dashboard Main --->
+        <div class="fn-adm-main">
+            <!--- Topbar --->
+            <header class="fn-adm-topbar">
+                <div class="fn-adm-topbar-left">
+                    <button type="button" class="fn-adm-menu-toggle" id="fn-adm-menu-toggle"
+                        aria-label="Open Dashboard Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="fn-adm-topbar-title">
+                        <span class="fn-adm-topbar-eyebrow">Finance Platform</span>
+                        <h1>Admin Analytics</h1>
+                    </div>
+                </div>
+                <div class="fn-adm-topbar-right">
+                    <div class="fn-adm-topbar-email">
+                        <i class="bi bi-envelope"></i>
+                        <span id="fn-adm-topbar-email">admin@example.com</span>
+                    </div>
+                    <div class="fn-adm-topbar-profile">
+                        <button type="button" class="fn-adm-profile-btn" aria-label="Open Profile">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                            <span class="fn-adm-profile-status"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <!--- Dashboard Content --->
+            <main class="fn-adm-content">
+                <!--- Analytics Section --->
+                <section class="fn-adm-analytics-page" id="fn-adm-analytics-page">
+                    <!--- Analytics Header --->
+                    <div class="fn-adm-analytics-header">
+                        <div class="fn-adm-analytics-heading">
+                            <span class="fn-adm-analytics-eyebrow"><i class="bi bi-bar-chart-line-fill"></i>
+                                Analytics</span>
+                            <h2>See the numbers behind every decision.</h2>
+                            <p>Track portfolio performance, market activity, allocation and financial trends from one
+                                analytical workspace.</p>
+                        </div>
+                        <div class="fn-adm-analytics-header-actions">
+                            <button type="button" class="fn-adm-analytics-export" id="fn-adm-analytics-export">
+                                <i class="bi bi-download"></i>
+                                <span>Export Report</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--- Analytics Controls --->
+                    <div class="fn-adm-analytics-controls">
+                        <div class="fn-adm-analytics-control-group">
+                            <span class="fn-adm-analytics-control-label">Period</span>
+                            <div class="fn-adm-analytics-period" id="fn-adm-analytics-period">
+                                <button type="button" class="active" data-period="7D">7D</button>
+                                <button type="button" data-period="30D">30D</button>
+                                <button type="button" data-period="90D">90D</button>
+                                <button type="button" data-period="1Y">1Y</button>
+                            </div>
+                        </div>
+                        <div class="fn-adm-analytics-control-group">
+                            <span class="fn-adm-analytics-control-label">Asset Class</span>
+                            <div class="fn-adm-analytics-select-wrap">
+                                <i class="bi bi-layers"></i>
+                                <select id="fn-adm-analytics-asset-filter">
+                                    <option value="all">All Assets</option>
+                                    <option value="equity">Equity</option>
+                                    <option value="debt">Debt</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="fn-adm-analytics-control-group">
+                            <span class="fn-adm-analytics-control-label">Market</span>
+                            <div class="fn-adm-analytics-select-wrap">
+                                <i class="bi bi-globe2"></i>
+                                <select id="fn-adm-analytics-market-filter">
+                                    <option value="all">All Markets</option>
+                                    <option value="india">India</option>
+                                    <option value="us">United States</option>
+                                    <option value="global">Global</option>
+                                </select>
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                        </div>
+                        <button type="button" class="fn-adm-analytics-reset" id="fn-adm-analytics-reset">
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                            <span>Reset</span>
+                        </button>
+                    </div>
+                    <!--- Analytics Metrics --->
+                    <div class="fn-adm-analytics-metrics">
+                        <div class="fn-adm-analytics-metric">
+                            <div class="fn-adm-analytics-metric-top">
+                                <span class="fn-adm-analytics-metric-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                                <span class="fn-adm-analytics-metric-change"
+                                    id="fn-adm-analytics-growth-change">+8.4%</span>
+                            </div>
+                            <span class="fn-adm-analytics-metric-label">Portfolio Growth</span>
+                            <strong id="fn-adm-analytics-growth">18.42%</strong>
+                            <small id="fn-adm-analytics-growth-note">Current selected period</small>
+                        </div>
+                        <div class="fn-adm-analytics-metric">
+                            <div class="fn-adm-analytics-metric-top">
+                                <span class="fn-adm-analytics-metric-icon blue"><i class="bi bi-wallet2"></i></span>
+                                <span class="fn-adm-analytics-metric-change"
+                                    id="fn-adm-analytics-value-change">+6.2%</span>
+                            </div>
+                            <span class="fn-adm-analytics-metric-label">Managed Value</span>
+                            <strong id="fn-adm-analytics-value">₹12.84L</strong>
+                            <small>Platform managed value</small>
+                        </div>
+                        <div class="fn-adm-analytics-metric">
+                            <div class="fn-adm-analytics-metric-top">
+                                <span class="fn-adm-analytics-metric-icon purple"><i class="bi bi-activity"></i></span>
+                                <span class="fn-adm-analytics-metric-change"
+                                    id="fn-adm-analytics-return-change">+4.8%</span>
+                            </div>
+                            <span class="fn-adm-analytics-metric-label">Average Return</span>
+                            <strong id="fn-adm-analytics-return">12.64%</strong>
+                            <small>Across selected assets</small>
+                        </div>
+                        <div class="fn-adm-analytics-metric">
+                            <div class="fn-adm-analytics-metric-top">
+                                <span class="fn-adm-analytics-metric-icon orange"><i class="bi bi-people"></i></span>
+                                <span class="fn-adm-analytics-metric-change"
+                                    id="fn-adm-analytics-client-change">+12.6%</span>
+                            </div>
+                            <span class="fn-adm-analytics-metric-label">Active Clients</span>
+                            <strong id="fn-adm-analytics-clients">2,846</strong>
+                            <small>Active platform accounts</small>
+                        </div>
+                    </div>
+                    <!--- Analytics Main Grid --->
+                    <div class="fn-adm-analytics-main-grid">
+                        <!--- Performance Analytics --->
+                        <div class="fn-adm-analytics-panel fn-adm-analytics-performance">
+                            <div class="fn-adm-analytics-panel-header">
+                                <div>
+                                    <span class="fn-adm-analytics-panel-label">Performance Analytics</span>
+                                    <h3>Portfolio performance</h3>
+                                </div>
+                                <span class="fn-adm-analytics-period-label" id="fn-adm-analytics-period-label">Last 7
+                                    Days</span>
+                            </div>
+                            <div class="fn-adm-analytics-performance-summary">
+                                <div>
+                                    <strong id="fn-adm-analytics-chart-value">18.42%</strong>
+                                    <span><i class="bi bi-arrow-up-right"></i> Performance</span>
+                                </div>
+                                <span id="fn-adm-analytics-chart-status">Positive trend</span>
+                            </div>
+                            <div class="fn-adm-analytics-chart">
+                                <div class="fn-adm-analytics-chart-y">
+                                    <span>20%</span>
+                                    <span>15%</span>
+                                    <span>10%</span>
+                                    <span>5%</span>
+                                    <span>0%</span>
+                                </div>
+                                <div class="fn-adm-analytics-chart-area">
+                                    <div class="fn-adm-analytics-chart-grid">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <svg class="fn-adm-analytics-chart-svg" viewBox="0 0 900 300"
+                                        preserveAspectRatio="none">
+                                        <defs>
+                                            <linearGradient id="fnAdmAnalyticsGradient" x1="0" x2="0" y1="0" y2="1">
+                                                <stop offset="0%" stop-color="#16c784" stop-opacity=".25"></stop>
+                                                <stop offset="100%" stop-color="#16c784" stop-opacity="0"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                        <path id="fn-adm-analytics-chart-fill" class="fn-adm-analytics-chart-fill" d="">
+                                        </path>
+                                        <path id="fn-adm-analytics-chart-line" class="fn-adm-analytics-chart-line" d="">
+                                        </path>
+                                        <circle id="fn-adm-analytics-chart-dot" cx="0" cy="0" r="6"></circle>
+                                    </svg>
+                                    <div class="fn-adm-analytics-chart-x" id="fn-adm-analytics-chart-x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Allocation Analytics --->
+                        <div class="fn-adm-analytics-panel fn-adm-analytics-allocation">
+                            <div class="fn-adm-analytics-panel-header">
+                                <div>
+                                    <span class="fn-adm-analytics-panel-label">Asset Allocation</span>
+                                    <h3>Portfolio mix</h3>
+                                </div>
+                            </div>
+                            <div class="fn-adm-analytics-allocation-body">
+                                <div class="fn-adm-analytics-donut" id="fn-adm-analytics-donut">
+                                    <div>
+                                        <strong id="fn-adm-analytics-donut-value">100%</strong>
+                                        <span>Portfolio</span>
+                                    </div>
+                                </div>
+                                <div class="fn-adm-analytics-allocation-legend" id="fn-adm-analytics-allocation-legend">
+                                    <div data-asset="equity">
+                                        <span><i class="equity"></i>Equity</span>
+                                        <strong>42%</strong>
+                                    </div>
+                                    <div data-asset="debt">
+                                        <span><i class="debt"></i>Debt</span>
+                                        <strong>28%</strong>
+                                    </div>
+                                    <div data-asset="cash">
+                                        <span><i class="cash"></i>Cash</span>
+                                        <strong>18%</strong>
+                                    </div>
+                                    <div data-asset="other">
+                                        <span><i class="other"></i>Other</span>
+                                        <strong>12%</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fn-adm-analytics-allocation-footer">
+                                <span><i class="bi bi-info-circle"></i> Allocation updates with the selected asset
+                                    class.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Market Analytics --->
+                    <div class="fn-adm-analytics-panel fn-adm-analytics-market-panel">
+                        <div class="fn-adm-analytics-panel-header fn-adm-analytics-market-header">
+                            <div>
+                                <span class="fn-adm-analytics-panel-label">Market Performance</span>
+                                <h3>Tracked instruments</h3>
+                            </div>
+                            <div class="fn-adm-analytics-search">
+                                <i class="bi bi-search"></i>
+                                <input type="search" id="fn-adm-analytics-search" placeholder="Search instrument..."
+                                    aria-label="Search instrument">
+                            </div>
+                        </div>
+                        <div class="fn-adm-analytics-table-wrap">
+                            <table class="fn-adm-analytics-table">
+                                <thead>
+                                    <tr>
+                                        <th>Instrument</th>
+                                        <th>Market</th>
+                                        <th>Last Value</th>
+                                        <th>Change</th>
+                                        <th>Performance</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="fn-adm-analytics-market-body">
+                                    <tr data-asset="equity" data-market="india">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-bar-chart-fill"></i></span>
+                                                <div><strong>NIFTY 50</strong><small>Equity Index</small></div>
+                                            </div>
+                                        </td>
+                                        <td>India</td>
+                                        <td>24,850</td>
+                                        <td class="positive">+1.24%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart positive-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status positive">Positive</span></td>
+                                    </tr>
+                                    <tr data-asset="equity" data-market="india">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-bar-chart"></i></span>
+                                                <div><strong>SENSEX</strong><small>Equity Index</small></div>
+                                            </div>
+                                        </td>
+                                        <td>India</td>
+                                        <td>81,450</td>
+                                        <td class="positive">+0.86%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart positive-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status positive">Positive</span></td>
+                                    </tr>
+                                    <tr data-asset="equity" data-market="us">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-graph-up"></i></span>
+                                                <div><strong>S&P 500</strong><small>US Equity Index</small></div>
+                                            </div>
+                                        </td>
+                                        <td>United States</td>
+                                        <td>5,940</td>
+                                        <td class="positive">+0.64%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart positive-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status positive">Positive</span></td>
+                                    </tr>
+                                    <tr data-asset="equity" data-market="us">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-graph-up-arrow"></i></span>
+                                                <div><strong>NASDAQ</strong><small>US Technology Index</small></div>
+                                            </div>
+                                        </td>
+                                        <td>United States</td>
+                                        <td>19,420</td>
+                                        <td class="positive">+1.05%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart positive-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status positive">Positive</span></td>
+                                    </tr>
+                                    <tr data-asset="other" data-market="global">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-circle"></i></span>
+                                                <div><strong>GOLD</strong><small>Commodity</small></div>
+                                            </div>
+                                        </td>
+                                        <td>Global</td>
+                                        <td>$2,645</td>
+                                        <td class="positive">+0.42%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart positive-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status positive">Positive</span></td>
+                                    </tr>
+                                    <tr data-asset="other" data-market="global">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-droplet"></i></span>
+                                                <div><strong>CRUDE OIL</strong><small>Commodity</small></div>
+                                            </div>
+                                        </td>
+                                        <td>Global</td>
+                                        <td>$74.20</td>
+                                        <td class="negative">-0.38%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart negative-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status negative">Negative</span></td>
+                                    </tr>
+                                    <tr data-asset="cash" data-market="india">
+                                        <td>
+                                            <div class="fn-adm-analytics-instrument">
+                                                <span class="fn-adm-analytics-instrument-icon"><i
+                                                        class="bi bi-currency-exchange"></i></span>
+                                                <div><strong>USD / INR</strong><small>Currency</small></div>
+                                            </div>
+                                        </td>
+                                        <td>India</td>
+                                        <td>₹83.42</td>
+                                        <td class="negative">-0.12%</td>
+                                        <td>
+                                            <div class="fn-adm-analytics-mini-chart negative-chart">
+                                                <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        </td>
+                                        <td><span class="fn-adm-analytics-status neutral">Stable</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="fn-adm-analytics-empty" id="fn-adm-analytics-empty">
+                            <i class="bi bi-search"></i>
+                            <strong>No instruments found</strong>
+                            <span>Try changing your filters or search term.</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-analytics.js"></script>
+</body>
+
+</html>

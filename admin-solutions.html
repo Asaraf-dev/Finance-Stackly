@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard | Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!--- Admin Dashboard --->
+    <div class="fn-adm-dashboard" id="fn-adm-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="fn-adm-sidebar-overlay" id="fn-adm-sidebar-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="fn-adm-sidebar" id="fn-adm-sidebar">
+            <div class="fn-adm-sidebar-inner">
+                <!--- Sidebar Header --->
+                <div class="fn-adm-sidebar-header">
+                    <a href="index.html" class="fn-adm-sidebar-brand">
+                        <span class="fn-adm-sidebar-logo"><img src="assets/images/brand-logo.webp" alt="Finance"></span>
+                    </a>
+                    <button type="button" class="fn-adm-sidebar-close" id="fn-adm-sidebar-close"
+                        aria-label="Close Sidebar"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <!--- Mobile Sidebar User --->
+                <div class="fn-adm-sidebar-user">
+                    <div class="fn-adm-sidebar-user-icon"><i class="bi bi-person"></i></div>
+                    <div class="fn-adm-sidebar-user-content">
+                        <span class="fn-adm-sidebar-user-label">Signed In As</span>
+                        <strong id="fn-adm-sidebar-email">admin@example.com</strong>
+                    </div>
+                </div>
+                <!--- Sidebar Navigation --->
+                <nav class="fn-adm-sidebar-nav">
+                    <a href="admin-dashboard.html" class="fn-adm-sidebar-link" data-section="overview">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Overview</span>
+                    </a>
+                    <a href="admin-analytics.html" class="fn-adm-sidebar-link" data-section="analytics">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-bar-chart-line"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Analytics</span>
+                    </a>
+                    <a href="admin-solutions.html" class="fn-adm-sidebar-link active" data-section="solutions">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-stars"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Solutions</span>
+                    </a>
+                    <a href="admin-profile.html" class="fn-adm-sidebar-link" data-section="profile">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Profile</span>
+                    </a>
+                    <a href="login.html" class="fn-adm-sidebar-link fn-adm-sidebar-logout" id="fn-adm-logout">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Logout</span>
+                    </a>
+                </nav>
+                <!--- Sidebar Footer --->
+                <div class="fn-adm-sidebar-footer">
+                    <span class="fn-adm-sidebar-status"><i></i> Secure Session</span>
+                    <span class="fn-adm-sidebar-version">Finance Platform</span>
+                </div>
+            </div>
+        </aside>
+        <!--- Dashboard Main --->
+        <div class="fn-adm-main">
+            <!--- Topbar --->
+            <header class="fn-adm-topbar">
+                <div class="fn-adm-topbar-left">
+                    <button type="button" class="fn-adm-menu-toggle" id="fn-adm-menu-toggle"
+                        aria-label="Open Dashboard Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="fn-adm-topbar-title">
+                        <span class="fn-adm-topbar-eyebrow">Finance Platform</span>
+                        <h1>Admin Solution</h1>
+                    </div>
+                </div>
+                <div class="fn-adm-topbar-right">
+                    <div class="fn-adm-topbar-email">
+                        <i class="bi bi-envelope"></i>
+                        <span id="fn-adm-topbar-email">admin@example.com</span>
+                    </div>
+                    <div class="fn-adm-topbar-profile">
+                        <button type="button" class="fn-adm-profile-btn" aria-label="Open Profile">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                            <span class="fn-adm-profile-status"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <main class="fn-adm-content">
+                <!--- Solutions Section --->
+                <section class="fn-adm-solutions-page" id="fn-adm-solutions-page">
+                    <!--- Solutions Header --->
+                    <div class="fn-adm-solutions-header">
+                        <div class="fn-adm-solutions-heading">
+                            <span class="fn-adm-solutions-eyebrow"><i class="bi bi-stars"></i> AI Solutions</span>
+                            <h2>Intelligence built around your financial workflow.</h2>
+                            <p>Manage the intelligent financial tools available across the Finance platform and monitor
+                                their current status.</p>
+                        </div>
+                        <button type="button" class="fn-adm-solutions-add" id="fn-adm-solutions-add">
+                            <i class="bi bi-plus-lg"></i>
+                            <span>Add Solution</span>
+                        </button>
+                    </div>
+                    <!--- Solutions Metrics --->
+                    <div class="fn-adm-solutions-metrics">
+                        <div class="fn-adm-solutions-metric">
+                            <div class="fn-adm-solutions-metric-icon"><i class="bi bi-grid"></i></div>
+                            <div>
+                                <span>Total Solutions</span>
+                                <strong id="fn-adm-solutions-total">6</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-solutions-metric">
+                            <div class="fn-adm-solutions-metric-icon active"><i class="bi bi-check-circle"></i></div>
+                            <div>
+                                <span>Active Solutions</span>
+                                <strong id="fn-adm-solutions-active">5</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-solutions-metric">
+                            <div class="fn-adm-solutions-metric-icon usage"><i class="bi bi-activity"></i></div>
+                            <div>
+                                <span>Monthly Usage</span>
+                                <strong>8.9K</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-solutions-metric">
+                            <div class="fn-adm-solutions-metric-icon security"><i class="bi bi-shield-check"></i></div>
+                            <div>
+                                <span>System Status</span>
+                                <strong>Secure</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Solutions Toolbar --->
+                    <div class="fn-adm-solutions-toolbar">
+                        <div class="fn-adm-solutions-search">
+                            <i class="bi bi-search"></i>
+                            <input type="search" id="fn-adm-solutions-search" placeholder="Search solutions..."
+                                aria-label="Search solutions">
+                        </div>
+                        <div class="fn-adm-solutions-filter">
+                            <button type="button" class="active" data-category="all">All</button>
+                            <button type="button" data-category="insights">Insights</button>
+                            <button type="button" data-category="automation">Automation</button>
+                            <button type="button" data-category="data">Data</button>
+                            <button type="button" data-category="planning">Planning</button>
+                        </div>
+                        <div class="fn-adm-solutions-status">
+                            <select id="fn-adm-solutions-status" aria-label="Filter solution status">
+                                <option value="all">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <button type="button" class="fn-adm-solutions-reset" id="fn-adm-solutions-reset">
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                            <span>Reset</span>
+                        </button>
+                    </div>
+                    <!--- Solutions Grid --->
+                    <div class="fn-adm-solutions-grid" id="fn-adm-solutions-grid">
+                        <!--- Solution Card --->
+                        <article class="fn-adm-solution-item" data-category="insights" data-status="active"
+                            data-name="Smart Financial Insights">
+                            <div class="fn-adm-solution-item-top">
+                                <span class="fn-adm-solution-item-number">01</span>
+                                <span class="fn-adm-solution-item-status active"><i></i> Active</span>
+                            </div>
+                            <div class="fn-adm-solution-item-icon green"><i class="bi bi-stars"></i></div>
+                            <div class="fn-adm-solution-item-content">
+                                <span class="fn-adm-solution-item-category">Insights</span>
+                                <h3>Smart Financial Insights</h3>
+                                <p>Transform complex financial information into clear, meaningful insights for faster
+                                    understanding.</p>
+                            </div>
+                            <div class="fn-adm-solution-item-stats">
+                                <div>
+                                    <span>Monthly Usage</span>
+                                    <strong>2.8K</strong>
+                                </div>
+                                <div>
+                                    <span>Accuracy</span>
+                                    <strong>96.4%</strong>
+                                </div>
+                            </div>
+                            <div class="fn-adm-solution-item-bottom">
+                                <button type="button" class="fn-adm-solution-details"
+                                    data-solution="Smart Financial Insights">View Details <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                                <label class="fn-adm-solution-switch">
+                                    <input type="checkbox" checked data-solution-toggle>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </article>
+                        <!--- Solution Card --->
+                        <article class="fn-adm-solution-item" data-category="automation" data-status="active"
+                            data-name="Intelligent Automation">
+                            <div class="fn-adm-solution-item-top">
+                                <span class="fn-adm-solution-item-number">02</span>
+                                <span class="fn-adm-solution-item-status active"><i></i> Active</span>
+                            </div>
+                            <div class="fn-adm-solution-item-icon blue"><i class="bi bi-robot"></i></div>
+                            <div class="fn-adm-solution-item-content">
+                                <span class="fn-adm-solution-item-category">Automation</span>
+                                <h3>Intelligent Automation</h3>
+                                <p>Automate repetitive financial workflows while keeping every important process visible
+                                    and controlled.</p>
+                            </div>
+                            <div class="fn-adm-solution-item-stats">
+                                <div>
+                                    <span>Monthly Usage</span>
+                                    <strong>1.9K</strong>
+                                </div>
+                                <div>
+                                    <span>Efficiency</span>
+                                    <strong>91.8%</strong>
+                                </div>
+                            </div>
+                            <div class="fn-adm-solution-item-bottom">
+                                <button type="button" class="fn-adm-solution-details"
+                                    data-solution="Intelligent Automation">View Details <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                                <label class="fn-adm-solution-switch">
+                                    <input type="checkbox" checked data-solution-toggle>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </article>
+                        <!--- Solution Card --->
+                        <article class="fn-adm-solution-item" data-category="data" data-status="active"
+                            data-name="Data Intelligence">
+                            <div class="fn-adm-solution-item-top">
+                                <span class="fn-adm-solution-item-number">03</span>
+                                <span class="fn-adm-solution-item-status active"><i></i> Active</span>
+                            </div>
+                            <div class="fn-adm-solution-item-icon purple"><i class="bi bi-database-check"></i></div>
+                            <div class="fn-adm-solution-item-content">
+                                <span class="fn-adm-solution-item-category">Data</span>
+                                <h3>Data Intelligence</h3>
+                                <p>Connect financial data points to identify patterns, relationships and useful
+                                    opportunities.</p>
+                            </div>
+                            <div class="fn-adm-solution-item-stats">
+                                <div>
+                                    <span>Monthly Usage</span>
+                                    <strong>1.6K</strong>
+                                </div>
+                                <div>
+                                    <span>Data Quality</span>
+                                    <strong>98.1%</strong>
+                                </div>
+                            </div>
+                            <div class="fn-adm-solution-item-bottom">
+                                <button type="button" class="fn-adm-solution-details"
+                                    data-solution="Data Intelligence">View Details <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                                <label class="fn-adm-solution-switch">
+                                    <input type="checkbox" checked data-solution-toggle>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </article>
+                        <!--- Solution Card --->
+                        <article class="fn-adm-solution-item" data-category="planning" data-status="active"
+                            data-name="Financial Planning Assistant">
+                            <div class="fn-adm-solution-item-top">
+                                <span class="fn-adm-solution-item-number">04</span>
+                                <span class="fn-adm-solution-item-status active"><i></i> Active</span>
+                            </div>
+                            <div class="fn-adm-solution-item-icon orange"><i class="bi bi-compass"></i></div>
+                            <div class="fn-adm-solution-item-content">
+                                <span class="fn-adm-solution-item-category">Planning</span>
+                                <h3>Financial Planning Assistant</h3>
+                                <p>Help users organize financial goals and understand possible paths toward those goals.
+                                </p>
+                            </div>
+                            <div class="fn-adm-solution-item-stats">
+                                <div>
+                                    <span>Monthly Usage</span>
+                                    <strong>1.2K</strong>
+                                </div>
+                                <div>
+                                    <span>Engagement</span>
+                                    <strong>88.6%</strong>
+                                </div>
+                            </div>
+                            <div class="fn-adm-solution-item-bottom">
+                                <button type="button" class="fn-adm-solution-details"
+                                    data-solution="Financial Planning Assistant">View Details <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                                <label class="fn-adm-solution-switch">
+                                    <input type="checkbox" checked data-solution-toggle>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </article>
+                        <!--- Solution Card --->
+                        <article class="fn-adm-solution-item" data-category="insights" data-status="active"
+                            data-name="Market Intelligence">
+                            <div class="fn-adm-solution-item-top">
+                                <span class="fn-adm-solution-item-number">05</span>
+                                <span class="fn-adm-solution-item-status active"><i></i> Active</span>
+                            </div>
+                            <div class="fn-adm-solution-item-icon teal"><i class="bi bi-graph-up-arrow"></i></div>
+                            <div class="fn-adm-solution-item-content">
+                                <span class="fn-adm-solution-item-category">Insights</span>
+                                <h3>Market Intelligence</h3>
+                                <p>Bring together market signals and financial information into a focused analytical
+                                    view.</p>
+                            </div>
+                            <div class="fn-adm-solution-item-stats">
+                                <div>
+                                    <span>Monthly Usage</span>
+                                    <strong>936</strong>
+                                </div>
+                                <div>
+                                    <span>Signal Rate</span>
+                                    <strong>89.2%</strong>
+                                </div>
+                            </div>
+                            <div class="fn-adm-solution-item-bottom">
+                                <button type="button" class="fn-adm-solution-details"
+                                    data-solution="Market Intelligence">View Details <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                                <label class="fn-adm-solution-switch">
+                                    <input type="checkbox" checked data-solution-toggle>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </article>
+                        <!--- Solution Card --->
+                        <article class="fn-adm-solution-item" data-category="data" data-status="inactive"
+                            data-name="Risk Intelligence">
+                            <div class="fn-adm-solution-item-top">
+                                <span class="fn-adm-solution-item-number">06</span>
+                                <span class="fn-adm-solution-item-status inactive"><i></i> Inactive</span>
+                            </div>
+                            <div class="fn-adm-solution-item-icon red"><i class="bi bi-shield-exclamation"></i></div>
+                            <div class="fn-adm-solution-item-content">
+                                <span class="fn-adm-solution-item-category">Data</span>
+                                <h3>Risk Intelligence</h3>
+                                <p>Surface potential financial risk indicators and organize them for easier review and
+                                    monitoring.</p>
+                            </div>
+                            <div class="fn-adm-solution-item-stats">
+                                <div>
+                                    <span>Monthly Usage</span>
+                                    <strong>—</strong>
+                                </div>
+                                <div>
+                                    <span>Availability</span>
+                                    <strong>Paused</strong>
+                                </div>
+                            </div>
+                            <div class="fn-adm-solution-item-bottom">
+                                <button type="button" class="fn-adm-solution-details"
+                                    data-solution="Risk Intelligence">View Details <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                                <label class="fn-adm-solution-switch">
+                                    <input type="checkbox" data-solution-toggle>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </article>
+                    </div>
+                    <!--- Solutions Empty State --->
+                    <div class="fn-adm-solutions-empty" id="fn-adm-solutions-empty">
+                        <div class="fn-adm-solutions-empty-icon"><i class="bi bi-search"></i></div>
+                        <strong>No solutions found</strong>
+                        <span>Try another search or change the selected filters.</span>
+                        <button type="button" id="fn-adm-solutions-empty-reset">Reset Filters</button>
+                    </div>
+                    <!--- Solution Details Modal --->
+                    <div class="fn-adm-solution-modal" id="fn-adm-solution-modal">
+                        <div class="fn-adm-solution-modal-overlay" id="fn-adm-solution-modal-overlay"></div>
+                        <div class="fn-adm-solution-modal-box">
+                            <button type="button" class="fn-adm-solution-modal-close" id="fn-adm-solution-modal-close"
+                                aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                            <span class="fn-adm-solution-modal-icon" id="fn-adm-solution-modal-icon"><i
+                                    class="bi bi-stars"></i></span>
+                            <span class="fn-adm-solution-modal-category"
+                                id="fn-adm-solution-modal-category">Insights</span>
+                            <h3 id="fn-adm-solution-modal-title">Smart Financial Insights</h3>
+                            <p id="fn-adm-solution-modal-description">Transform complex financial information into
+                                clear, meaningful insights for faster understanding.</p>
+                            <div class="fn-adm-solution-modal-info">
+                                <div><span>Status</span><strong id="fn-adm-solution-modal-status">Active</strong></div>
+                                <div><span>Monthly Usage</span><strong id="fn-adm-solution-modal-usage">2.8K</strong>
+                                </div>
+                                <div><span>Performance</span><strong
+                                        id="fn-adm-solution-modal-performance">96.4%</strong></div>
+                            </div>
+                            <button type="button" class="fn-adm-solution-modal-action"
+                                id="fn-adm-solution-modal-action">Close</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-solution.js"></script>
+</body>
+
+</html>

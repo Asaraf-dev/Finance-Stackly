@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard | Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!--- Admin Dashboard --->
+    <div class="fn-adm-dashboard" id="fn-adm-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="fn-adm-sidebar-overlay" id="fn-adm-sidebar-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="fn-adm-sidebar" id="fn-adm-sidebar">
+            <div class="fn-adm-sidebar-inner">
+                <!--- Sidebar Header --->
+                <div class="fn-adm-sidebar-header">
+                    <a href="index.html" class="fn-adm-sidebar-brand">
+                        <span class="fn-adm-sidebar-logo"><img src="assets/images/brand-logo.webp" alt="Finance"></span>
+                    </a>
+                    <button type="button" class="fn-adm-sidebar-close" id="fn-adm-sidebar-close"
+                        aria-label="Close Sidebar"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <!--- Mobile Sidebar User --->
+                <div class="fn-adm-sidebar-user">
+                    <div class="fn-adm-sidebar-user-icon"><i class="bi bi-person"></i></div>
+                    <div class="fn-adm-sidebar-user-content">
+                        <span class="fn-adm-sidebar-user-label">Signed In As</span>
+                        <strong id="fn-adm-sidebar-email">admin@example.com</strong>
+                    </div>
+                </div>
+                <!--- Sidebar Navigation --->
+                <nav class="fn-adm-sidebar-nav">
+                    <a href="admin-dashboard.html" class="fn-adm-sidebar-link" data-section="overview">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Overview</span>
+                    </a>
+                    <a href="admin-analytics.html" class="fn-adm-sidebar-link" data-section="analytics">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-bar-chart-line"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Analytics</span>
+                    </a>
+                    <a href="admin-solutions.html" class="fn-adm-sidebar-link" data-section="solutions">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-stars"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Solutions</span>
+                    </a>
+                    <a href="admin-profile.html" class="fn-adm-sidebar-link active" data-section="profile">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Profile</span>
+                    </a>
+                    <a href="login.html" class="fn-adm-sidebar-link fn-adm-sidebar-logout" id="fn-adm-logout">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Logout</span>
+                    </a>
+                </nav>
+                <!--- Sidebar Footer --->
+                <div class="fn-adm-sidebar-footer">
+                    <span class="fn-adm-sidebar-status"><i></i> Secure Session</span>
+                    <span class="fn-adm-sidebar-version">Finance Platform</span>
+                </div>
+            </div>
+        </aside>
+        <!--- Dashboard Main --->
+        <div class="fn-adm-main">
+            <!--- Topbar --->
+            <header class="fn-adm-topbar">
+                <div class="fn-adm-topbar-left">
+                    <button type="button" class="fn-adm-menu-toggle" id="fn-adm-menu-toggle"
+                        aria-label="Open Dashboard Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="fn-adm-topbar-title">
+                        <span class="fn-adm-topbar-eyebrow">Finance Platform</span>
+                        <h1>Admin Profile</h1>
+                    </div>
+                </div>
+                <div class="fn-adm-topbar-right">
+                    <div class="fn-adm-topbar-email">
+                        <i class="bi bi-envelope"></i>
+                        <span id="fn-adm-topbar-email">admin@example.com</span>
+                    </div>
+                    <div class="fn-adm-topbar-profile">
+                        <button type="button" class="fn-adm-profile-btn" aria-label="Open Profile">
+                            <img src="assets/images/profile-1.webp" alt="Profile">
+                            <span class="fn-adm-profile-status"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <!--- Dashboard Content --->
+            <main class="fn-adm-content">
+                <!--- Profile Header --->
+                <section class="fn-adm-profile-header">
+                    <div class="fn-adm-profile-header-content">
+                        <div class="fn-adm-profile-badge"><i class="bi bi-person-circle"></i><span>Account
+                                Profile</span></div>
+                        <h2>Manage your <span>Finance profile.</span></h2>
+                        <p>View your registered account information, login details, and current platform access.</p>
+                    </div>
+                    <div class="fn-adm-profile-header-status"><span></span> Account Active</div>
+                </section>
+                <!--- Profile Overview --->
+                <section class="fn-adm-profile-overview">
+                    <div class="fn-adm-profile-card fn-adm-profile-card-main">
+                        <div class="fn-adm-profile-card-top">
+                            <div class="fn-adm-profile-avatar">
+                                <img src="assets/images/profile-1.webp" alt="Profile">
+                                <span class="fn-adm-profile-avatar-status"></span>
+                            </div>
+                            <div class="fn-adm-profile-identity">
+                                <span class="fn-adm-profile-role" id="fn-adm-profile-role">Administrator</span>
+                                <h3 id="fn-adm-profile-name">Admin User</h3>
+                                <p id="fn-adm-profile-email">admin@example.com</p>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-divider"></div>
+                        <div class="fn-adm-profile-account-meta">
+                            <div class="fn-adm-profile-meta-item">
+                                <span>Account Type</span>
+                                <strong id="fn-adm-profile-account-role">Admin</strong>
+                            </div>
+                            <div class="fn-adm-profile-meta-item">
+                                <span>Account Status</span>
+                                <strong class="fn-adm-profile-active"><i></i> Active</strong>
+                            </div>
+                            <div class="fn-adm-profile-meta-item">
+                                <span>Session</span>
+                                <strong>Secure</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Profile Security Card --->
+                    <div class="fn-adm-profile-card fn-adm-profile-security">
+                        <div class="fn-adm-profile-card-heading">
+                            <div>
+                                <span class="fn-adm-profile-card-eyebrow">Security</span>
+                                <h3>Account protection</h3>
+                            </div>
+                            <div class="fn-adm-profile-security-icon"><i class="bi bi-shield-check"></i></div>
+                        </div>
+                        <div class="fn-adm-profile-security-status">
+                            <div class="fn-adm-profile-security-status-icon"><i class="bi bi-check-lg"></i></div>
+                            <div>
+                                <strong>Protected Account</strong>
+                                <span>Your account is currently active and secured.</span>
+                            </div>
+                        </div>
+                        <a href="404.html" class="fn-adm-profile-password-btn">
+                            <span><i class="bi bi-key"></i> Change Password</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </section>
+                <!--- Personal Information --->
+                <section class="fn-adm-profile-section">
+                    <div class="fn-adm-profile-section-heading">
+                        <div>
+                            <span class="fn-adm-profile-section-label">01 / Personal Information</span>
+                            <h3>Registered account details</h3>
+                        </div>
+                        <span class="fn-adm-profile-section-icon"><i class="bi bi-person-vcard"></i></span>
+                    </div>
+                    <div class="fn-adm-profile-details-grid">
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-person"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Full Name</span>
+                                <strong id="fn-adm-profile-detail-name">Not Available</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-telephone"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Phone Number</span>
+                                <strong id="fn-adm-profile-detail-phone">Not Available</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-envelope"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Email Address</span>
+                                <strong id="fn-adm-profile-detail-email">Not Available</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-person-badge"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Registered Role</span>
+                                <strong id="fn-adm-profile-detail-role">Not Available</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--- Login Information --->
+                <section class="fn-adm-profile-section fn-adm-profile-login-section">
+                    <div class="fn-adm-profile-section-heading">
+                        <div>
+                            <span class="fn-adm-profile-section-label">02 / Login Information</span>
+                            <h3>Current session details</h3>
+                        </div>
+                        <span class="fn-adm-profile-section-icon"><i class="bi bi-shield-lock"></i></span>
+                    </div>
+                    <div class="fn-adm-profile-details-grid">
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-envelope-at"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Logged In Email</span>
+                                <strong id="fn-adm-profile-logged-email">Not Available</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-person-check"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Logged In Role</span>
+                                <strong id="fn-adm-profile-logged-role">Not Available</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-bookmark-check"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Remember Me</span>
+                                <strong id="fn-adm-profile-remember">Not Available</strong>
+                            </div>
+                        </div>
+                        <div class="fn-adm-profile-detail">
+                            <div class="fn-adm-profile-detail-icon"><i class="bi bi-person-check-fill"></i></div>
+                            <div class="fn-adm-profile-detail-content">
+                                <span>Session Status</span>
+                                <strong class="fn-adm-profile-session-active"><i></i> Logged In</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--- Account Data Summary --->
+                <section class="fn-adm-profile-summary">
+                    <div class="fn-adm-profile-summary-content">
+                        <div class="fn-adm-profile-summary-icon"><i class="bi bi-database-check"></i></div>
+                        <div>
+                            <span>Local Account Storage</span>
+                            <h3>Your profile information is synchronized with this browser.</h3>
+                            <p>Name, phone number, email, role, and login/session values are loaded from the data
+                                created by the authentication system.</p>
+                        </div>
+                    </div>
+                    <div class="fn-adm-profile-summary-badge"><i class="bi bi-check-circle"></i> Data Available</div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-profile.js"></script>
+</body>
+
+</html>

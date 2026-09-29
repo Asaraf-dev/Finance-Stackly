@@ -1,0 +1,96 @@
+/*--- Loader ---*/
+.fn-ldr-loader {position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#061725;opacity:1;visibility:visible;transition:opacity .7s ease,visibility .7s ease;}
+.fn-ldr-loader.fn-ldr-hidden {opacity:0;visibility:hidden;pointer-events:none;}
+.fn-ldr-loader.fn-ldr-exit {opacity:0;visibility:hidden;pointer-events:none;}
+/*--- Loader Background ---*/
+.fn-ldr-loader::before {content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--fn-ldr-x,50%) var(--fn-ldr-y,50%),rgba(22,199,132,.12) 0,rgba(22,199,132,.04) 18%,transparent 45%);pointer-events:none;transition:background .15s ease;}
+.fn-ldr-loader::after {content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,199,132,.035),transparent 40%,rgba(37,99,235,.04));pointer-events:none;}
+.fn-ldr-glow {position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(22,199,132,.08);filter:blur(90px);animation:fnLdrGlow 5s ease-in-out infinite;}
+/*--- Loader Particles ---*/
+.fn-ldr-particles {position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.fn-ldr-particle {position:absolute;display:block;border-radius:50%;background:var(--fn-primary);opacity:.35;animation:fnLdrParticle 5s ease-in-out infinite;}
+/*--- Loader Orbits ---*/
+.fn-ldr-orbit {position:absolute;left:50%;top:45%;border:1px solid rgba(22,199,132,.13);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.fn-ldr-orbit-one {width:220px;height:220px;animation:fnLdrOrbit 8s linear infinite;}
+.fn-ldr-orbit-two {width:300px;height:145px;border-color:rgba(37,99,235,.13);transform:translate(-50%,-50%) rotate(35deg);animation:fnLdrOrbitReverse 11s linear infinite;}
+.fn-ldr-orbit-three {width:365px;height:185px;border-color:rgba(139,92,246,.1);transform:translate(-50%,-50%) rotate(-35deg);animation:fnLdrOrbit 14s linear infinite;}
+/*--- Loader Center ---*/
+.fn-ldr-center {position:relative;z-index:5;display:flex;align-items:center;justify-content:center;width:160px;height:160px;border-radius:50%;}
+.fn-ldr-logo {position:relative;z-index:3;display:flex;align-items:center;justify-content:center;width:150px;padding:13px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:rgba(255,255,255,.055);box-shadow:0 0 50px rgba(22,199,132,.12),inset 0 0 25px rgba(255,255,255,.035);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:fnLdrLogoFloat 3s ease-in-out infinite;}
+.fn-ldr-logo img {width:100%;height:100%;object-fit:contain;}
+.fn-ldr-pulse {position:absolute;inset:15px;border:1px solid rgba(22,199,132,.35);border-radius:50%;animation:fnLdrPulse 2.2s ease-out infinite;}
+/*--- Loader Financial Symbols ---*/
+.fn-ldr-symbol {position:absolute;z-index:4;display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:11px;background:rgba(255,255,255,.045);color:var(--fn-primary);font-size:14px;box-shadow:0 8px 25px rgba(0,0,0,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+.fn-ldr-symbol-one {left:calc(50% - 170px);top:calc(45% - 75px);animation:fnLdrFloatOne 4s ease-in-out infinite;}
+.fn-ldr-symbol-two {left:calc(50% + 135px);top:calc(45% - 65px);color:#60a5fa;animation:fnLdrFloatTwo 4.5s ease-in-out infinite;}
+.fn-ldr-symbol-three {left:calc(50% - 155px);top:calc(45% + 70px);color:#a78bfa;animation:fnLdrFloatThree 5s ease-in-out infinite;}
+.fn-ldr-symbol-four {left:calc(50% + 125px);top:calc(45% + 65px);animation:fnLdrFloatFour 4.2s ease-in-out infinite;}
+/*--- Loader Content ---*/
+.fn-ldr-content {position:absolute;z-index:6;top:calc(45% + 105px);left:0;width:100%;text-align:center;}
+.fn-ldr-brand {margin-bottom:7px;font-family:var(--fn-font-heading);font-size:12px;font-weight:700;letter-spacing:4px;color:var(--fn-white);}
+.fn-ldr-message {min-height:24px;padding:0 20px;font-size:11px;font-weight:500;letter-spacing:.3px;color:rgba(255,255,255,.48);transition:opacity .25s ease,transform .25s ease;}
+.fn-ldr-dots {display:flex;align-items:center;justify-content:center;gap:5px;margin-top:10px;}
+.fn-ldr-dots span {display:block;width:4px;height:4px;border-radius:50%;background:var(--fn-primary);animation:fnLdrDots 1.2s ease-in-out infinite;}
+.fn-ldr-dots span:nth-child(2) {animation-delay:.15s;}
+.fn-ldr-dots span:nth-child(3) {animation-delay:.3s;}
+/*--- Loader Animations ---*/
+@keyframes fnLdrGlow {0%,100%{transform:scale(.9);opacity:.65;}50%{transform:scale(1.15);opacity:1;}}
+@keyframes fnLdrOrbit {from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes fnLdrOrbitReverse {from{transform:translate(-50%,-50%) rotate(35deg);}to{transform:translate(-50%,-50%) rotate(-325deg);}}
+@keyframes fnLdrLogoFloat {0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-5px) scale(1.025);}}
+@keyframes fnLdrPulse {0%{transform:scale(.8);opacity:.8;}80%,100%{transform:scale(1.35);opacity:0;}}
+@keyframes fnLdrParticle {0%,100%{transform:translate3d(0,0,0);opacity:.15;}50%{transform:translate3d(0,-25px,0);opacity:.55;}}
+@keyframes fnLdrFloatOne {0%,100%{transform:translate(0,0) rotate(0deg);}50%{transform:translate(-8px,-12px) rotate(-8deg);}}
+@keyframes fnLdrFloatTwo {0%,100%{transform:translate(0,0) rotate(0deg);}50%{transform:translate(9px,-9px) rotate(8deg);}}
+@keyframes fnLdrFloatThree {0%,100%{transform:translate(0,0) rotate(0deg);}50%{transform:translate(-7px,10px) rotate(7deg);}}
+@keyframes fnLdrFloatFour {0%,100%{transform:translate(0,0) rotate(0deg);}50%{transform:translate(8px,9px) rotate(-7deg);}}
+@keyframes fnLdrDots {0%,100%{transform:translateY(0);opacity:.35;}50%{transform:translateY(-4px);opacity:1;}}
+/*--- Loader Responsive 1050px ---*/
+@media(max-width:1050px){
+.fn-ldr-orbit-one {width:205px;height:205px;}
+.fn-ldr-orbit-two {width:280px;height:135px;}
+.fn-ldr-orbit-three {width:335px;height:170px;}
+}
+/*--- Loader Responsive 991px ---*/
+@media(max-width:991px){
+.fn-ldr-symbol-one {left:calc(50% - 150px);}
+.fn-ldr-symbol-two {left:calc(50% + 115px);}
+.fn-ldr-symbol-three {left:calc(50% - 140px);}
+.fn-ldr-symbol-four {left:calc(50% + 105px);}
+}
+/*--- Loader Responsive 767px ---*/
+@media(max-width:767px){
+.fn-ldr-orbit-one {width:180px;height:180px;}
+.fn-ldr-orbit-two {width:245px;height:120px;}
+.fn-ldr-orbit-three {width:295px;height:150px;}
+.fn-ldr-symbol {width:34px;height:34px;font-size:12px;}
+.fn-ldr-symbol-one {left:calc(50% - 125px);top:calc(45% - 70px);}
+.fn-ldr-symbol-two {left:calc(50% + 95px);top:calc(45% - 60px);}
+.fn-ldr-symbol-three {left:calc(50% - 115px);top:calc(45% + 60px);}
+.fn-ldr-symbol-four {left:calc(50% + 85px);top:calc(45% + 55px);}
+.fn-ldr-logo {width:150px;}
+.fn-ldr-center {width:120px;height:120px;}
+.fn-ldr-content {top:calc(45% + 95px);}
+.fn-ldr-brand{margin-top: 20px;}
+}
+/*--- Loader Responsive 575px ---*/
+@media(max-width:575px){
+.fn-ldr-orbit-one {width:155px;height:155px;}
+.fn-ldr-orbit-two {width:215px;height:105px;}
+.fn-ldr-orbit-three {width:255px;height:130px;}
+.fn-ldr-symbol {width:31px;height:31px;font-size:11px;border-radius:9px;}
+.fn-ldr-symbol-one {left:calc(50% - 105px);top:calc(45% - 60px);}
+.fn-ldr-symbol-two {left:calc(50% + 75px);top:calc(45% - 52px);}
+.fn-ldr-symbol-three {left:calc(50% - 98px);top:calc(45% + 50px);}
+.fn-ldr-symbol-four {left:calc(50% + 68px);top:calc(45% + 45px);}
+.fn-ldr-logo {padding:11px;border-radius:23px;}
+.fn-ldr-center {width:105px;height:105px;}
+.fn-ldr-content {top:calc(45% + 85px);}
+.fn-ldr-brand {font-size:12px;letter-spacing:3px;}
+.fn-ldr-message {font-size:10px;}
+.fn-ldr-glow {width:300px;height:300px;}
+}
+/*--- Loader Reduced Motion ---*/
+@media(prefers-reduced-motion:reduce){
+.fn-ldr-glow,.fn-ldr-particle,.fn-ldr-orbit,.fn-ldr-logo,.fn-ldr-pulse,.fn-ldr-symbol,.fn-ldr-dots span {animation:none;}
+}

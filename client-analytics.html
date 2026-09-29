@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Client Dashboard | Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!--- Client Dashboard --->
+    <div class="fn-adm-dashboard" id="fn-adm-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="fn-adm-sidebar-overlay" id="fn-adm-sidebar-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="fn-adm-sidebar" id="fn-adm-sidebar">
+            <div class="fn-adm-sidebar-inner">
+                <!--- Sidebar Header --->
+                <div class="fn-adm-sidebar-header">
+                    <a href="index.html" class="fn-adm-sidebar-brand">
+                        <span class="fn-adm-sidebar-logo"><img src="assets/images/brand-logo.webp" alt="Finance"></span>
+                    </a>
+                    <button type="button" class="fn-adm-sidebar-close" id="fn-adm-sidebar-close"
+                        aria-label="Close Sidebar"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <!--- Mobile Sidebar User --->
+                <div class="fn-adm-sidebar-user">
+                    <div class="fn-adm-sidebar-user-icon"><i class="bi bi-person"></i></div>
+                    <div class="fn-adm-sidebar-user-content">
+                        <span class="fn-adm-sidebar-user-label">Signed In As</span>
+                        <strong id="fn-adm-sidebar-email">Client@example.com</strong>
+                    </div>
+                </div>
+                <!--- Sidebar Navigation --->
+                <nav class="fn-adm-sidebar-nav">
+                    <a href="client-dashboard.html" class="fn-adm-sidebar-link" data-section="overview">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Overview</span>
+                    </a>
+                    <a href="client-analytics.html" class="fn-adm-sidebar-link active" data-section="analytics">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-bar-chart-line"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Analytics</span>
+                    </a>
+                    <a href="client-investments.html" class="fn-adm-sidebar-link" data-section="investments">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Investments</span>
+                    </a>
+                    <a href="client-profile.html" class="fn-adm-sidebar-link" data-section="profile">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Profile</span>
+                    </a>
+                    <a href="login.html" class="fn-adm-sidebar-link fn-adm-sidebar-logout" id="fn-adm-logout">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Logout</span>
+                    </a>
+                </nav>
+                <!--- Sidebar Footer --->
+                <div class="fn-adm-sidebar-footer">
+                    <span class="fn-adm-sidebar-status"><i></i> Secure Session</span>
+                    <span class="fn-adm-sidebar-version">Finance Platform</span>
+                </div>
+            </div>
+        </aside>
+        <!--- Dashboard Main --->
+        <div class="fn-adm-main">
+            <!--- Topbar --->
+            <header class="fn-adm-topbar">
+                <div class="fn-adm-topbar-left">
+                    <button type="button" class="fn-adm-menu-toggle" id="fn-adm-menu-toggle"
+                        aria-label="Open Dashboard Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="fn-adm-topbar-title">
+                        <span class="fn-adm-topbar-eyebrow">Finance Platform</span>
+                        <h1>Client Analytics</h1>
+                    </div>
+                </div>
+                <div class="fn-adm-topbar-right">
+                    <div class="fn-adm-topbar-email">
+                        <i class="bi bi-envelope"></i>
+                        <span id="fn-adm-topbar-email">Client@example.com</span>
+                    </div>
+                    <div class="fn-adm-topbar-profile">
+                        <button type="button" class="fn-adm-profile-btn" aria-label="Open Profile">
+                            <img src="assets/images/profile-2.webp" alt="Profile">
+                            <span class="fn-adm-profile-status"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <main class="fn-adm-content">
+                <!--- Analytics Header --->
+                <section class="fn-clt-analytics-header">
+                    <div>
+                        <span class="fn-clt-analytics-eyebrow"><i class="bi bi-bar-chart-line"></i> Portfolio
+                            Analytics</span>
+                        <h2>Understand your <span>financial performance.</span></h2>
+                        <p>Explore your portfolio performance, allocation, returns, and investment activity across
+                            different periods.</p>
+                    </div>
+                    <div class="fn-clt-analytics-header-status"><i class="bi bi-shield-check"></i> Personal Analytics
+                    </div>
+                </section>
+                <!--- Analytics Controls --->
+                <section class="fn-clt-analytics-controls">
+                    <div class="fn-clt-analytics-control">
+                        <label for="fn-clt-analytics-period">Time Period</label>
+                        <select id="fn-clt-analytics-period">
+                            <option value="1M">Last 1 Month</option>
+                            <option value="3M">Last 3 Months</option>
+                            <option value="6M" selected>Last 6 Months</option>
+                            <option value="1Y">Last 1 Year</option>
+                        </select>
+                    </div>
+                    <div class="fn-clt-analytics-control">
+                        <label for="fn-clt-analytics-asset">Investment Type</label>
+                        <select id="fn-clt-analytics-asset">
+                            <option value="all" selected>All Investments</option>
+                            <option value="equity">Equity</option>
+                            <option value="debt">Debt</option>
+                            <option value="mutual">Mutual Funds</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+                    <div class="fn-clt-analytics-control">
+                        <label for="fn-clt-analytics-view">Performance View</label>
+                        <select id="fn-clt-analytics-view">
+                            <option value="value" selected>Portfolio Value</option>
+                            <option value="growth">Growth</option>
+                            <option value="return">Return %</option>
+                        </select>
+                    </div>
+                    <button type="button" class="fn-clt-analytics-reset" id="fn-clt-analytics-reset"><i
+                            class="bi bi-arrow-counterclockwise"></i><span>Reset</span></button>
+                </section>
+                <!--- Analytics Metrics --->
+                <section class="fn-clt-analytics-metrics">
+                    <div class="fn-clt-analytics-metric">
+                        <div class="fn-clt-analytics-metric-icon"><i class="bi bi-wallet2"></i></div>
+                        <div>
+                            <span>Portfolio Value</span>
+                            <strong id="fn-clt-analytics-value">₹12,84,650</strong>
+                            <small id="fn-clt-analytics-value-change"><i class="bi bi-arrow-up"></i> +8.42%</small>
+                        </div>
+                    </div>
+                    <div class="fn-clt-analytics-metric">
+                        <div class="fn-clt-analytics-metric-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <div>
+                            <span>Total Growth</span>
+                            <strong id="fn-clt-analytics-growth">₹99,650</strong>
+                            <small id="fn-clt-analytics-growth-change"><i class="bi bi-arrow-up"></i> +8.41%</small>
+                        </div>
+                    </div>
+                    <div class="fn-clt-analytics-metric">
+                        <div class="fn-clt-analytics-metric-icon"><i class="bi bi-percent"></i></div>
+                        <div>
+                            <span>Annualized Return</span>
+                            <strong id="fn-clt-analytics-return">8.42%</strong>
+                            <small>Portfolio return</small>
+                        </div>
+                    </div>
+                    <div class="fn-clt-analytics-metric">
+                        <div class="fn-clt-analytics-metric-icon"><i class="bi bi-pie-chart"></i></div>
+                        <div>
+                            <span>Invested Assets</span>
+                            <strong id="fn-clt-analytics-assets">₹11,98,250</strong>
+                            <small id="fn-clt-analytics-assets-count">4 asset classes</small>
+                        </div>
+                    </div>
+                </section>
+                <!--- Performance Analytics --->
+                <section class="fn-clt-analytics-main-grid">
+                    <div class="fn-clt-analytics-performance fn-clt-analytics-panel">
+                        <div class="fn-clt-analytics-panel-header">
+                            <div>
+                                <span class="fn-clt-analytics-panel-label">Performance Analysis</span>
+                                <h3 id="fn-clt-analytics-chart-title">Portfolio value</h3>
+                            </div>
+                            <div class="fn-clt-analytics-chart-period" id="fn-clt-analytics-chart-period">6 Months</div>
+                        </div>
+                        <div class="fn-clt-analytics-chart-summary">
+                            <div>
+                                <span>Current</span>
+                                <strong id="fn-clt-analytics-chart-current">₹12,84,650</strong>
+                            </div>
+                            <div>
+                                <span>Change</span>
+                                <strong class="fn-clt-analytics-positive"
+                                    id="fn-clt-analytics-chart-change">+8.42%</strong>
+                            </div>
+                        </div>
+                        <div class="fn-clt-analytics-chart">
+                            <div class="fn-clt-analytics-y-axis">
+                                <span>13L</span>
+                                <span>12L</span>
+                                <span>11L</span>
+                                <span>10L</span>
+                                <span>9L</span>
+                            </div>
+                            <div class="fn-clt-analytics-chart-area">
+                                <div class="fn-clt-analytics-grid-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <svg viewBox="0 0 760 280" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="fn-clt-analytics-gradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#16c784" stop-opacity=".22"></stop>
+                                            <stop offset="100%" stop-color="#16c784" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <path id="fn-clt-analytics-chart-area-path"
+                                        class="fn-clt-analytics-chart-area-path"></path>
+                                    <path id="fn-clt-analytics-chart-line" class="fn-clt-analytics-chart-line"></path>
+                                    <g id="fn-clt-analytics-chart-points"></g>
+                                </svg>
+                                <div class="fn-clt-analytics-x-axis" id="fn-clt-analytics-x-axis"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Performance Breakdown --->
+                    <div class="fn-clt-analytics-breakdown fn-clt-analytics-panel">
+                        <div class="fn-clt-analytics-panel-header">
+                            <div>
+                                <span class="fn-clt-analytics-panel-label">Performance Breakdown</span>
+                                <h3>By investment type</h3>
+                            </div>
+                        </div>
+                        <div class="fn-clt-analytics-breakdown-chart">
+                            <div class="fn-clt-analytics-breakdown-donut" id="fn-clt-analytics-breakdown-donut">
+                                <div>
+                                    <strong id="fn-clt-analytics-donut-value">₹12.84L</strong>
+                                    <span>Portfolio</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fn-clt-analytics-breakdown-list" id="fn-clt-analytics-breakdown-list">
+                            <div data-asset="equity">
+                                <span><i class="equity"></i>Equity</span>
+                                <strong>48%</strong>
+                            </div>
+                            <div data-asset="debt">
+                                <span><i class="debt"></i>Debt</span>
+                                <strong>27%</strong>
+                            </div>
+                            <div data-asset="mutual">
+                                <span><i class="mutual"></i>Mutual Funds</span>
+                                <strong>15%</strong>
+                            </div>
+                            <div data-asset="cash">
+                                <span><i class="cash"></i>Cash</span>
+                                <strong>10%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--- Investment Performance Table --->
+                <section class="fn-clt-analytics-investments fn-clt-analytics-panel">
+                    <div class="fn-clt-analytics-panel-header">
+                        <div>
+                            <span class="fn-clt-analytics-panel-label">Investment Performance</span>
+                            <h3>Your portfolio holdings</h3>
+                        </div>
+                        <div class="fn-clt-analytics-table-count" id="fn-clt-analytics-table-count">4 Investments</div>
+                    </div>
+                    <div class="fn-clt-analytics-table-wrap">
+                        <table class="fn-clt-analytics-table">
+                            <thead>
+                                <tr>
+                                    <th>Investment</th>
+                                    <th>Type</th>
+                                    <th>Invested</th>
+                                    <th>Current Value</th>
+                                    <th>Return</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="fn-clt-analytics-table-body">
+                                <tr data-asset="equity">
+                                    <td>
+                                        <div class="fn-clt-analytics-investment-name">
+                                            <span class="fn-clt-analytics-table-icon"><i
+                                                    class="bi bi-bar-chart-fill"></i></span>
+                                            <div><strong>Large Cap Equity</strong><small>Equity Fund</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Equity</td>
+                                    <td>₹2,92,000</td>
+                                    <td>₹3,24,800</td>
+                                    <td class="fn-clt-analytics-positive">+11.24%</td>
+                                    <td><span class="fn-clt-analytics-status active">Active</span></td>
+                                </tr>
+                                <tr data-asset="mutual">
+                                    <td>
+                                        <div class="fn-clt-analytics-investment-name">
+                                            <span class="fn-clt-analytics-table-icon"><i
+                                                    class="bi bi-buildings"></i></span>
+                                            <div><strong>Balanced Growth</strong><small>Hybrid Fund</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Mutual Fund</td>
+                                    <td>₹2,65,700</td>
+                                    <td>₹2,86,450</td>
+                                    <td class="fn-clt-analytics-positive">+7.82%</td>
+                                    <td><span class="fn-clt-analytics-status active">Active</span></td>
+                                </tr>
+                                <tr data-asset="debt">
+                                    <td>
+                                        <div class="fn-clt-analytics-investment-name">
+                                            <span class="fn-clt-analytics-table-icon"><i class="bi bi-safe2"></i></span>
+                                            <div><strong>Secure Debt Fund</strong><small>Debt Fund</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Debt</td>
+                                    <td>₹2,04,050</td>
+                                    <td>₹2,14,600</td>
+                                    <td class="fn-clt-analytics-positive">+5.16%</td>
+                                    <td><span class="fn-clt-analytics-status active">Active</span></td>
+                                </tr>
+                                <tr data-asset="equity">
+                                    <td>
+                                        <div class="fn-clt-analytics-investment-name">
+                                            <span class="fn-clt-analytics-table-icon"><i
+                                                    class="bi bi-globe2"></i></span>
+                                            <div><strong>Global Opportunities</strong><small>Global Equity</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Equity</td>
+                                    <td>₹1,81,650</td>
+                                    <td>₹1,98,800</td>
+                                    <td class="fn-clt-analytics-positive">+9.46%</td>
+                                    <td><span class="fn-clt-analytics-status active">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="fn-clt-analytics-empty" id="fn-clt-analytics-empty">
+                            <i class="bi bi-search"></i>
+                            <strong>No matching investments</strong>
+                            <span>Try changing the investment type filter.</span>
+                        </div>
+                    </div>
+                </section>
+                <!--- Analytics Insights --->
+                <section class="fn-clt-analytics-insights">
+                    <div class="fn-clt-analytics-insight">
+                        <div class="fn-clt-analytics-insight-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <div>
+                            <span>Portfolio Momentum</span>
+                            <strong>Positive</strong>
+                            <p>Your portfolio is currently showing positive growth across the selected period.</p>
+                        </div>
+                    </div>
+                    <div class="fn-clt-analytics-insight">
+                        <div class="fn-clt-analytics-insight-icon"><i class="bi bi-shield-check"></i></div>
+                        <div>
+                            <span>Diversification</span>
+                            <strong>Balanced</strong>
+                            <p>Your portfolio is distributed across multiple investment categories.</p>
+                        </div>
+                    </div>
+                    <div class="fn-clt-analytics-insight">
+                        <div class="fn-clt-analytics-insight-icon"><i class="bi bi-eye"></i></div>
+                        <div>
+                            <span>Review Frequency</span>
+                            <strong>Monthly</strong>
+                            <p>Reviewing your portfolio periodically can help you track changes over time.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-analytics.js"></script>
+</body>
+
+</html>

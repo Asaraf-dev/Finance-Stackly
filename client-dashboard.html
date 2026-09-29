@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Client Dashboard | Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!--- Client Dashboard --->
+    <div class="fn-adm-dashboard" id="fn-adm-dashboard">
+        <!--- Sidebar Overlay --->
+        <div class="fn-adm-sidebar-overlay" id="fn-adm-sidebar-overlay"></div>
+        <!--- Sidebar --->
+        <aside class="fn-adm-sidebar" id="fn-adm-sidebar">
+            <div class="fn-adm-sidebar-inner">
+                <!--- Sidebar Header --->
+                <div class="fn-adm-sidebar-header">
+                    <a href="index.html" class="fn-adm-sidebar-brand">
+                        <span class="fn-adm-sidebar-logo"><img src="assets/images/brand-logo.webp" alt="Finance"></span>
+                    </a>
+                    <button type="button" class="fn-adm-sidebar-close" id="fn-adm-sidebar-close"
+                        aria-label="Close Sidebar"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <!--- Mobile Sidebar User --->
+                <div class="fn-adm-sidebar-user">
+                    <div class="fn-adm-sidebar-user-icon"><i class="bi bi-person"></i></div>
+                    <div class="fn-adm-sidebar-user-content">
+                        <span class="fn-adm-sidebar-user-label">Signed In As</span>
+                        <strong id="fn-adm-sidebar-email">Client@example.com</strong>
+                    </div>
+                </div>
+                <!--- Sidebar Navigation --->
+                <nav class="fn-adm-sidebar-nav">
+                    <a href="client-dashboard.html" class="fn-adm-sidebar-link active" data-section="overview">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-grid-1x2"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Overview</span>
+                    </a>
+                    <a href="client-analytics.html" class="fn-adm-sidebar-link" data-section="analytics">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-bar-chart-line"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Analytics</span>
+                    </a>
+                    <a href="client-investments.html" class="fn-adm-sidebar-link" data-section="investments">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Investments</span>
+                    </a>
+                    <a href="client-profile.html" class="fn-adm-sidebar-link" data-section="profile">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Profile</span>
+                    </a>
+                    <a href="login.html" class="fn-adm-sidebar-link fn-adm-sidebar-logout" id="fn-adm-logout">
+                        <span class="fn-adm-sidebar-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="fn-adm-sidebar-link-text">Logout</span>
+                    </a>
+                </nav>
+                <!--- Sidebar Footer --->
+                <div class="fn-adm-sidebar-footer">
+                    <span class="fn-adm-sidebar-status"><i></i> Secure Session</span>
+                    <span class="fn-adm-sidebar-version">Finance Platform</span>
+                </div>
+            </div>
+        </aside>
+        <!--- Dashboard Main --->
+        <div class="fn-adm-main">
+            <!--- Topbar --->
+            <header class="fn-adm-topbar">
+                <div class="fn-adm-topbar-left">
+                    <button type="button" class="fn-adm-menu-toggle" id="fn-adm-menu-toggle"
+                        aria-label="Open Dashboard Menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="fn-adm-topbar-title">
+                        <span class="fn-adm-topbar-eyebrow">Finance Platform</span>
+                        <h1>Client Dashboard</h1>
+                    </div>
+                </div>
+                <div class="fn-adm-topbar-right">
+                    <div class="fn-adm-topbar-email">
+                        <i class="bi bi-envelope"></i>
+                        <span id="fn-adm-topbar-email">Client@example.com</span>
+                    </div>
+                    <div class="fn-adm-topbar-profile">
+                        <button type="button" class="fn-adm-profile-btn" aria-label="Open Profile">
+                            <img src="assets/images/profile-2.webp" alt="Profile">
+                            <span class="fn-adm-profile-status"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <main class="fn-adm-content">
+                <!--- Client Welcome --->
+                <section class="fn-clt-overview-welcome">
+                    <div class="fn-clt-overview-welcome-content">
+                        <div class="fn-clt-overview-eyebrow"><i class="bi bi-stars"></i> Personal Finance Overview</div>
+                        <h2>Welcome back, <span id="fn-clt-overview-name">Client</span>.</h2>
+                        <p>Track your financial progress, review your portfolio, and stay informed about your
+                            investments.</p>
+                    </div>
+                    <div class="fn-clt-overview-welcome-status">
+                        <span></span>
+                        <div>
+                            <strong>Portfolio Active</strong>
+                            <small>Last updated today</small>
+                        </div>
+                    </div>
+                </section>
+                <!--- Client Financial Stats --->
+                <section class="fn-clt-overview-stats">
+                    <div class="fn-clt-overview-stat-card">
+                        <div class="fn-clt-overview-stat-top">
+                            <span>Total Portfolio</span>
+                            <div class="fn-clt-overview-stat-icon"><i class="bi bi-wallet2"></i></div>
+                        </div>
+                        <strong>₹12,84,650</strong>
+                        <div class="fn-clt-overview-stat-bottom">
+                            <span class="fn-clt-overview-positive"><i class="bi bi-arrow-up"></i> 8.42%</span>
+                            <span>This year</span>
+                        </div>
+                    </div>
+                    <div class="fn-clt-overview-stat-card">
+                        <div class="fn-clt-overview-stat-top">
+                            <span>Total Invested</span>
+                            <div class="fn-clt-overview-stat-icon"><i class="bi bi-bank"></i></div>
+                        </div>
+                        <strong>₹11,85,000</strong>
+                        <div class="fn-clt-overview-stat-bottom">
+                            <span>Principal</span>
+                            <span>Since 2024</span>
+                        </div>
+                    </div>
+                    <div class="fn-clt-overview-stat-card">
+                        <div class="fn-clt-overview-stat-top">
+                            <span>Portfolio Growth</span>
+                            <div class="fn-clt-overview-stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        </div>
+                        <strong>₹99,650</strong>
+                        <div class="fn-clt-overview-stat-bottom">
+                            <span class="fn-clt-overview-positive"><i class="bi bi-arrow-up"></i> 8.41%</span>
+                            <span>Net growth</span>
+                        </div>
+                    </div>
+                    <div class="fn-clt-overview-stat-card">
+                        <div class="fn-clt-overview-stat-top">
+                            <span>Available Balance</span>
+                            <div class="fn-clt-overview-stat-icon"><i class="bi bi-cash-stack"></i></div>
+                        </div>
+                        <strong>₹86,400</strong>
+                        <div class="fn-clt-overview-stat-bottom">
+                            <span>Available</span>
+                            <span>For investing</span>
+                        </div>
+                    </div>
+                </section>
+                <!--- Portfolio Performance --->
+                <section class="fn-clt-overview-main-grid">
+                    <div class="fn-clt-overview-performance fn-clt-overview-panel">
+                        <div class="fn-clt-overview-panel-header">
+                            <div>
+                                <span class="fn-clt-overview-panel-label">Portfolio Performance</span>
+                                <h3>Investment growth</h3>
+                            </div>
+                            <div class="fn-clt-overview-periods">
+                                <button type="button" class="active chart-btn" data-period="1M">1M</button>
+                            </div>
+                        </div>
+                        <div class="fn-clt-overview-chart-summary">
+                            <div>
+                                <span>Current Value</span>
+                                <strong>₹12,84,650</strong>
+                            </div>
+                            <div>
+                                <span>Growth</span>
+                                <strong class="fn-clt-overview-positive">+₹99,650</strong>
+                            </div>
+                        </div>
+                        <div class="fn-clt-overview-chart">
+                            <div class="fn-clt-overview-chart-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <svg viewBox="0 0 800 270" preserveAspectRatio="none"
+                                aria-label="Portfolio performance chart">
+                                <defs>
+                                    <linearGradient id="fn-clt-chart-gradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#16c784" stop-opacity=".25"></stop>
+                                        <stop offset="100%" stop-color="#16c784" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path class="fn-clt-overview-chart-area"
+                                    d="M0 225 C55 214 85 226 135 190 C180 157 220 180 260 151 C305 118 340 145 385 121 C430 97 460 116 510 87 C555 60 590 90 630 67 C680 38 720 55 800 25 L800 270 L0 270 Z">
+                                </path>
+                                <path class="fn-clt-overview-chart-line"
+                                    d="M0 225 C55 214 85 226 135 190 C180 157 220 180 260 151 C305 118 340 145 385 121 C430 97 460 116 510 87 C555 60 590 90 630 67 C680 38 720 55 800 25">
+                                </path>
+                                <circle cx="510" cy="87" r="5"></circle>
+                            </svg>
+                            <div class="fn-clt-overview-chart-labels">
+                                <span>Jan</span>
+                                <span>Mar</span>
+                                <span>May</span>
+                                <span>Jul</span>
+                                <span>Sep</span>
+                                <span>Nov</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Asset Allocation --->
+                    <div class="fn-clt-overview-allocation fn-clt-overview-panel">
+                        <div class="fn-clt-overview-panel-header">
+                            <div>
+                                <span class="fn-clt-overview-panel-label">Portfolio Mix</span>
+                                <h3>Asset allocation</h3>
+                            </div>
+                            <button type="button" class="fn-clt-overview-more"><i class="bi bi-three-dots"></i></button>
+                        </div>
+                        <div class="fn-clt-overview-donut-wrap">
+                            <div class="fn-clt-overview-donut">
+                                <div class="fn-clt-overview-donut-center">
+                                    <strong>100%</strong>
+                                    <span>Portfolio</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fn-clt-overview-allocation-list">
+                            <div><span><i class="fn-clt-overview-dot equity"></i>Equity</span><strong>48%</strong></div>
+                            <div><span><i class="fn-clt-overview-dot debt"></i>Debt</span><strong>27%</strong></div>
+                            <div><span><i class="fn-clt-overview-dot mutual"></i>Mutual Funds</span><strong>15%</strong>
+                            </div>
+                            <div><span><i class="fn-clt-overview-dot cash"></i>Cash</span><strong>10%</strong></div>
+                        </div>
+                    </div>
+                </section>
+                <!--- Investment Summary --->
+                <section class="fn-clt-overview-summary-grid">
+                    <div class="fn-clt-overview-investments fn-clt-overview-panel">
+                        <div class="fn-clt-overview-panel-header">
+                            <div>
+                                <span class="fn-clt-overview-panel-label">Investment Summary</span>
+                                <h3>Your investments</h3>
+                            </div>
+                            <a href="client-investments.html" class="fn-clt-overview-view-all">View All <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="fn-clt-overview-investment-list">
+                            <div class="fn-clt-overview-investment">
+                                <div class="fn-clt-overview-investment-icon"><i class="bi bi-bar-chart-fill"></i></div>
+                                <div class="fn-clt-overview-investment-name">
+                                    <strong>Large Cap Equity</strong>
+                                    <span>Equity Fund</span>
+                                </div>
+                                <div class="fn-clt-overview-investment-value">
+                                    <strong>₹3,24,800</strong>
+                                    <span class="fn-clt-overview-positive">+11.24%</span>
+                                </div>
+                            </div>
+                            <div class="fn-clt-overview-investment">
+                                <div class="fn-clt-overview-investment-icon"><i class="bi bi-buildings"></i></div>
+                                <div class="fn-clt-overview-investment-name">
+                                    <strong>Balanced Growth</strong>
+                                    <span>Hybrid Fund</span>
+                                </div>
+                                <div class="fn-clt-overview-investment-value">
+                                    <strong>₹2,86,450</strong>
+                                    <span class="fn-clt-overview-positive">+7.82%</span>
+                                </div>
+                            </div>
+                            <div class="fn-clt-overview-investment">
+                                <div class="fn-clt-overview-investment-icon"><i class="bi bi-safe2"></i></div>
+                                <div class="fn-clt-overview-investment-name">
+                                    <strong>Secure Debt Fund</strong>
+                                    <span>Debt Fund</span>
+                                </div>
+                                <div class="fn-clt-overview-investment-value">
+                                    <strong>₹2,14,600</strong>
+                                    <span class="fn-clt-overview-positive">+5.16%</span>
+                                </div>
+                            </div>
+                            <div class="fn-clt-overview-investment">
+                                <div class="fn-clt-overview-investment-icon"><i class="bi bi-pie-chart"></i></div>
+                                <div class="fn-clt-overview-investment-name">
+                                    <strong>Global Opportunities</strong>
+                                    <span>Global Equity</span>
+                                </div>
+                                <div class="fn-clt-overview-investment-value">
+                                    <strong>₹1,98,800</strong>
+                                    <span class="fn-clt-overview-positive">+9.46%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Recent Activity --->
+                    <div class="fn-clt-overview-activity fn-clt-overview-panel">
+                        <div class="fn-clt-overview-panel-header">
+                            <div>
+                                <span class="fn-clt-overview-panel-label">Recent Activity</span>
+                                <h3>Latest transactions</h3>
+                            </div>
+                        </div>
+                        <div class="fn-clt-overview-activity-list">
+                            <div class="fn-clt-overview-activity-item">
+                                <div class="fn-clt-overview-activity-icon deposit"><i class="bi bi-arrow-down-left"></i>
+                                </div>
+                                <div class="fn-clt-overview-activity-content">
+                                    <strong>Investment Added</strong>
+                                    <span>Large Cap Equity</span>
+                                </div>
+                                <div class="fn-clt-overview-activity-value">
+                                    <strong>+₹25,000</strong>
+                                    <span>Today</span>
+                                </div>
+                            </div>
+                            <div class="fn-clt-overview-activity-item">
+                                <div class="fn-clt-overview-activity-icon withdraw"><i class="bi bi-arrow-up-right"></i>
+                                </div>
+                                <div class="fn-clt-overview-activity-content">
+                                    <strong>Withdrawal</strong>
+                                    <span>Available Balance</span>
+                                </div>
+                                <div class="fn-clt-overview-activity-value">
+                                    <strong>−₹8,500</strong>
+                                    <span>2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="fn-clt-overview-activity-item">
+                                <div class="fn-clt-overview-activity-icon dividend"><i class="bi bi-cash-coin"></i>
+                                </div>
+                                <div class="fn-clt-overview-activity-content">
+                                    <strong>Dividend Received</strong>
+                                    <span>Balanced Growth</span>
+                                </div>
+                                <div class="fn-clt-overview-activity-value">
+                                    <strong>+₹2,840</strong>
+                                    <span>5 days ago</span>
+                                </div>
+                            </div>
+                            <div class="fn-clt-overview-activity-item">
+                                <div class="fn-clt-overview-activity-icon deposit"><i class="bi bi-arrow-down-left"></i>
+                                </div>
+                                <div class="fn-clt-overview-activity-content">
+                                    <strong>Investment Added</strong>
+                                    <span>Secure Debt Fund</span>
+                                </div>
+                                <div class="fn-clt-overview-activity-value">
+                                    <strong>+₹15,000</strong>
+                                    <span>8 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--- Quick Actions --->
+                <section class="fn-clt-overview-actions">
+                    <div class="fn-clt-overview-actions-heading">
+                        <span>Quick Actions</span>
+                        <p>Manage your financial journey</p>
+                    </div>
+                    <div class="fn-clt-overview-action-list">
+                        <a href="client-investments.html" class="fn-clt-overview-action">
+                            <span class="fn-clt-overview-action-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                            <span><strong>View Investments</strong><small>Track your investments</small></span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="client-analytics.html" class="fn-clt-overview-action">
+                            <span class="fn-clt-overview-action-icon"><i class="bi bi-bar-chart-line"></i></span>
+                            <span><strong>View Analytics</strong><small>Explore performance data</small></span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="client-profile.html" class="fn-clt-overview-action">
+                            <span class="fn-clt-overview-action-icon"><i class="bi bi-person"></i></span>
+                            <span><strong>My Profile</strong><small>Manage your account</small></span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-overview.js"></script>
+</body>
+
+</html>

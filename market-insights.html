@@ -1,0 +1,723 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Insights | Finance </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="fn-ldr-loader" id="fn-ldr-loader">
+    <div class="fn-ldr-glow"></div>
+    <div class="fn-ldr-particles" id="fn-ldr-particles"></div>
+    <div class="fn-ldr-orbit fn-ldr-orbit-one"></div>
+    <div class="fn-ldr-orbit fn-ldr-orbit-two"></div>
+    <div class="fn-ldr-orbit fn-ldr-orbit-three"></div>
+    <div class="fn-ldr-symbol fn-ldr-symbol-one"><i class="bi bi-graph-up-arrow"></i></div>
+    <div class="fn-ldr-symbol fn-ldr-symbol-two"><i class="bi bi-currency-dollar"></i></div>
+    <div class="fn-ldr-symbol fn-ldr-symbol-three"><i class="bi bi-bar-chart-line"></i></div>
+    <div class="fn-ldr-symbol fn-ldr-symbol-four"><i class="bi bi-pie-chart"></i></div>
+    <div class="fn-ldr-center">
+      <div class="fn-ldr-logo">
+        <img src="assets/images/brand-logo.webp" alt="Finance">
+      </div>
+      <div class="fn-ldr-pulse"></div>
+    </div>
+    <div class="fn-ldr-content">
+      <div class="fn-ldr-brand">FINANCE</div>
+      <div class="fn-ldr-message" id="fn-ldr-message">Preparing your financial experience...</div>
+      <div class="fn-ldr-dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+  <!--- NavBar --->
+  <div id="fn-navbar-component"></div>
+
+  <!--- Inner Page Hero Section Start --->
+  <section class="fn-hero" id="fn-hero">
+    <div class="fn-hero-grid"></div>
+    <div class="fn-hero-glow fn-hero-glow-one"></div>
+    <div class="fn-hero-glow fn-hero-glow-two"></div>
+    <div class="fn-hero-orbit fn-hero-orbit-one"></div>
+    <div class="fn-hero-orbit fn-hero-orbit-two"></div>
+    <div class="container fn-hero-container">
+      <div class="fn-hero-content">
+        <div class="fn-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span>Market Insights</span>
+        </div>
+        <div class="fn-hero-eyebrow"><span></span><i class="bi bi-grid"></i>Market Insights</div>
+        <h1 class="fn-hero-title">Understand the market. <span>Discover the bigger picture.</span></h1>
+        <p class="fn-hero-description">Explore Market Insights to help you plan, manage, protect, and grow
+          your financial future with greater clarity.</p>
+        <div class="fn-hero-status">
+          <span class="fn-hero-status-dot"></span>
+          <span>Explore Insights</span>
+        </div>
+      </div>
+      <div class="fn-hero-visual">
+        <div class="fn-hero-chart">
+          <svg viewBox="0 0 800 300" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="fnHeroGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#16c784"></stop>
+                <stop offset="100%" stop-color="#2563eb"></stop>
+              </linearGradient>
+            </defs>
+            <g class="fn-hero-chart-grid">
+              <line x1="0" y1="60" x2="800" y2="60"></line>
+              <line x1="0" y1="120" x2="800" y2="120"></line>
+              <line x1="0" y1="180" x2="800" y2="180"></line>
+              <line x1="0" y1="240" x2="800" y2="240"></line>
+            </g>
+            <path class="fn-hero-chart-area"
+              d="M0 245 C75 230 105 210 165 220 C225 230 250 165 315 180 C380 195 405 135 465 155 C525 175 555 105 615 125 C675 145 720 75 800 48 L800 300 L0 300 Z">
+            </path>
+            <path class="fn-hero-chart-line"
+              d="M0 245 C75 230 105 210 165 220 C225 230 250 165 315 180 C380 195 405 135 465 155 C525 175 555 105 615 125 C675 145 720 75 800 48">
+            </path>
+
+          </svg>
+        </div>
+        <div class="fn-hero-data fn-hero-data-one">
+          <span><i class="bi bi-graph-up-arrow"></i></span>
+          <div><small>Financial Planning</small><strong>Smart</strong></div>
+        </div>
+        <div class="fn-hero-data fn-hero-data-two">
+          <span><i class="bi bi-shield-check"></i></span>
+          <div><small>Strategy</small><strong>Focused</strong></div>
+        </div>
+        <div class="fn-hero-center-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+      </div>
+    </div>
+  </section>
+  <!--- Inner Page Hero Section End --->
+
+  <!--- Live Market Snapshot Section Start --->
+  <section class="fn-mkt-snapshot" id="fn-mkt-snapshot">
+    <div class="fn-mkt-snapshot-bg">
+      <div class="fn-mkt-snapshot-grid"></div>
+      <div class="fn-mkt-snapshot-glow fn-mkt-snapshot-glow-one"></div>
+      <div class="fn-mkt-snapshot-glow fn-mkt-snapshot-glow-two"></div>
+    </div>
+    <div class="container fn-mkt-snapshot-container">
+      <!--- Snapshot Header --->
+      <div class="fn-mkt-snapshot-header">
+        <div class="fn-mkt-snapshot-heading">
+          <div class="fn-mkt-snapshot-label"><span></span><i class="bi bi-broadcast"></i> Live Market Snapshot</div>
+          <h2 class="fn-mkt-snapshot-title">The market, <span>at a glance.</span></h2>
+          <p class="fn-mkt-snapshot-description">Track selected market indicators and get a quick view of how major
+            financial instruments are moving.</p>
+        </div>
+        <div class="fn-mkt-snapshot-status">
+          <span class="fn-mkt-snapshot-status-dot"></span>
+          <div>
+            <strong>Markets Open</strong>
+            <small>Data updates periodically</small>
+          </div>
+        </div>
+      </div>
+      <!--- Market Dashboard --->
+      <div class="fn-mkt-snapshot-dashboard">
+        <!--- Market Instruments --->
+        <div class="fn-mkt-snapshot-markets">
+          <!--- Market Item --->
+          <div class="fn-mkt-snapshot-item" data-market="sp500">
+            <div class="fn-mkt-snapshot-item-top">
+              <div class="fn-mkt-snapshot-item-name"><span class="fn-mkt-snapshot-item-icon"><i
+                    class="bi bi-graph-up"></i></span><strong>S&P 500</strong></div>
+              <span class="fn-mkt-snapshot-item-period">1D</span>
+            </div>
+            <div class="fn-mkt-snapshot-item-value">
+              <strong data-value>5,842.91</strong>
+              <span class="positive" data-change>+0.68%</span>
+            </div>
+            <div class="fn-mkt-snapshot-chart fn-mkt-snapshot-chart-up">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <!--- Market Item --->
+          <div class="fn-mkt-snapshot-item" data-market="nasdaq">
+            <div class="fn-mkt-snapshot-item-top">
+              <div class="fn-mkt-snapshot-item-name"><span class="fn-mkt-snapshot-item-icon"><i
+                    class="bi bi-bar-chart-line"></i></span><strong>NASDAQ</strong></div>
+              <span class="fn-mkt-snapshot-item-period">1D</span>
+            </div>
+            <div class="fn-mkt-snapshot-item-value">
+              <strong data-value>21,457.78</strong>
+              <span class="positive" data-change>+1.12%</span>
+            </div>
+            <div class="fn-mkt-snapshot-chart fn-mkt-snapshot-chart-up">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <!--- Market Item --->
+          <div class="fn-mkt-snapshot-item" data-market="dow">
+            <div class="fn-mkt-snapshot-item-top">
+              <div class="fn-mkt-snapshot-item-name"><span class="fn-mkt-snapshot-item-icon"><i
+                    class="bi bi-activity"></i></span><strong>DOW JONES</strong></div>
+              <span class="fn-mkt-snapshot-item-period">1D</span>
+            </div>
+            <div class="fn-mkt-snapshot-item-value">
+              <strong data-value>42,118.57</strong>
+              <span class="negative" data-change>-0.24%</span>
+            </div>
+            <div class="fn-mkt-snapshot-chart fn-mkt-snapshot-chart-down">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <!--- Market Item --->
+          <div class="fn-mkt-snapshot-item" data-market="gold">
+            <div class="fn-mkt-snapshot-item-top">
+              <div class="fn-mkt-snapshot-item-name"><span class="fn-mkt-snapshot-item-icon"><i
+                    class="bi bi-circle"></i></span><strong>GOLD</strong></div>
+              <span class="fn-mkt-snapshot-item-period">1D</span>
+            </div>
+            <div class="fn-mkt-snapshot-item-value">
+              <strong data-value>$3,842.40</strong>
+              <span class="positive" data-change>+0.47%</span>
+            </div>
+            <div class="fn-mkt-snapshot-chart fn-mkt-snapshot-chart-up">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <!--- Market Item --->
+          <div class="fn-mkt-snapshot-item" data-market="oil">
+            <div class="fn-mkt-snapshot-item-top">
+              <div class="fn-mkt-snapshot-item-name"><span class="fn-mkt-snapshot-item-icon"><i
+                    class="bi bi-fuel-pump"></i></span><strong>CRUDE OIL</strong></div>
+              <span class="fn-mkt-snapshot-item-period">1D</span>
+            </div>
+            <div class="fn-mkt-snapshot-item-value">
+              <strong data-value>$67.84</strong>
+              <span class="negative" data-change>-0.83%</span>
+            </div>
+            <div class="fn-mkt-snapshot-chart fn-mkt-snapshot-chart-down">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <!--- Market Item --->
+          <div class="fn-mkt-snapshot-item" data-market="usd-inr">
+            <div class="fn-mkt-snapshot-item-top">
+              <div class="fn-mkt-snapshot-item-name"><span class="fn-mkt-snapshot-item-icon"><i
+                    class="bi bi-currency-exchange"></i></span><strong>USD / INR</strong></div>
+              <span class="fn-mkt-snapshot-item-period">1D</span>
+            </div>
+            <div class="fn-mkt-snapshot-item-value">
+              <strong data-value>88.47</strong>
+              <span class="positive" data-change>+0.18%</span>
+            </div>
+            <div class="fn-mkt-snapshot-chart fn-mkt-snapshot-chart-up">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <!--- Market Overview --->
+        <div class="fn-mkt-snapshot-overview">
+          <div class="fn-mkt-snapshot-overview-top">
+            <span>Market Overview</span>
+            <i class="bi bi-three-dots"></i>
+          </div>
+          <div class="fn-mkt-snapshot-overview-circle">
+            <div class="fn-mkt-snapshot-overview-ring"></div>
+            <div class="fn-mkt-snapshot-overview-center">
+              <strong>64%</strong>
+              <span>Positive</span>
+            </div>
+          </div>
+          <div class="fn-mkt-snapshot-overview-stats">
+            <div class="fn-mkt-snapshot-overview-stat">
+              <span class="fn-mkt-snapshot-overview-stat-dot positive-dot"></span>
+              <div><strong>64%</strong><small>Positive</small></div>
+            </div>
+            <div class="fn-mkt-snapshot-overview-stat">
+              <span class="fn-mkt-snapshot-overview-stat-dot negative-dot"></span>
+              <div><strong>36%</strong><small>Negative</small></div>
+            </div>
+          </div>
+          <div class="fn-mkt-snapshot-overview-note">
+            <i class="bi bi-info-circle"></i>
+            <span>Snapshot values are illustrative and should not be treated as investment advice.</span>
+          </div>
+        </div>
+      </div>
+      <!--- Snapshot Footer --->
+      <div class="fn-mkt-snapshot-footer">
+        <div class="fn-mkt-snapshot-footer-left">
+          <i class="bi bi-clock-history"></i>
+          <span>Last updated <strong id="fn-mkt-snapshot-time">Just now</strong></span>
+        </div>
+        <a href="404.html" class="fn-mkt-snapshot-footer-link"><span>Explore Market Insights</span><i
+            class="bi bi-arrow-down"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Live Market Snapshot Section End --->
+
+  <!--- Featured Insight Section Start --->
+  <section class="fn-mkt-featured" id="fn-mkt-featured">
+    <div class="fn-mkt-featured-bg">
+      <div class="fn-mkt-featured-grid"></div>
+      <div class="fn-mkt-featured-glow"></div>
+    </div>
+    <div class="container fn-mkt-featured-container">
+      <!--- Featured Header --->
+      <div class="fn-mkt-featured-header">
+        <div class="fn-mkt-featured-label"><span></span><i class="bi bi-stars"></i> Featured Insight</div>
+        <span class="fn-mkt-featured-header-line"></span>
+        <span class="fn-mkt-featured-header-text">Market Intelligence / 01</span>
+      </div>
+      <!--- Featured Content --->
+      <article class="fn-mkt-featured-card">
+        <!--- Featured Visual --->
+        <div class="fn-mkt-featured-visual">
+          <div class="fn-mkt-featured-visual-grid"></div>
+          <div class="fn-mkt-featured-orbit fn-mkt-featured-orbit-one"></div>
+          <div class="fn-mkt-featured-orbit fn-mkt-featured-orbit-two"></div>
+          <div class="fn-mkt-featured-orbit fn-mkt-featured-orbit-three"></div>
+          <div class="fn-mkt-featured-visual-chart">
+            <div class="fn-mkt-featured-chart-label">
+              <span>MARKET TREND</span>
+              <strong>01</strong>
+            </div>
+            <div class="fn-mkt-featured-chart-area">
+              <span class="fn-mkt-featured-chart-line"></span>
+              <span class="fn-mkt-featured-chart-dot fn-mkt-featured-chart-dot-one"></span>
+              <span class="fn-mkt-featured-chart-dot fn-mkt-featured-chart-dot-two"></span>
+              <span class="fn-mkt-featured-chart-dot fn-mkt-featured-chart-dot-three"></span>
+              <span class="fn-mkt-featured-chart-dot fn-mkt-featured-chart-dot-four"></span>
+              <span class="fn-mkt-featured-chart-dot fn-mkt-featured-chart-dot-five"></span>
+            </div>
+            <div class="fn-mkt-featured-chart-bottom">
+              <span>JAN</span>
+              <span>MAR</span>
+              <span>MAY</span>
+              <span>JUL</span>
+              <span>SEP</span>
+            </div>
+          </div>
+          <div class="fn-mkt-featured-floating fn-mkt-featured-floating-one">
+            <i class="bi bi-graph-up-arrow"></i>
+            <div><strong>+12.8%</strong><span>Trend</span></div>
+          </div>
+          <div class="fn-mkt-featured-floating fn-mkt-featured-floating-two">
+            <span></span>
+            <div><strong>Market Signal</strong><small>Positive momentum</small></div>
+          </div>
+          <div class="fn-mkt-featured-visual-badge"><i class="bi bi-lightning-charge"></i> Key Perspective</div>
+        </div>
+        <!--- Featured Content --->
+        <div class="fn-mkt-featured-content">
+          <div class="fn-mkt-featured-meta">
+            <span>MARKET TRENDS</span>
+            <span class="fn-mkt-featured-meta-divider"></span>
+            <span>8 MIN READ</span>
+          </div>
+          <h2 class="fn-mkt-featured-title">Understanding the forces shaping today's <span>financial landscape.</span>
+          </h2>
+          <p class="fn-mkt-featured-description">Markets rarely move because of one factor. Interest rates, economic
+            activity, investor sentiment, technology, and global developments can all influence the direction of
+            financial markets.</p>
+          <p class="fn-mkt-featured-description">This insight explores the broader signals behind market movements and
+            why understanding context can be just as important as watching the numbers.</p>
+          <div class="fn-mkt-featured-insight-points">
+            <div class="fn-mkt-featured-point">
+              <span>01</span>
+              <div><strong>What Changed</strong><small>Identify the major market movements.</small></div>
+            </div>
+            <div class="fn-mkt-featured-point">
+              <span>02</span>
+              <div><strong>Why It Matters</strong><small>Understand the broader financial context.</small></div>
+            </div>
+            <div class="fn-mkt-featured-point">
+              <span>03</span>
+              <div><strong>What To Watch</strong><small>Follow the signals shaping future trends.</small></div>
+            </div>
+          </div>
+          <div class="fn-mkt-featured-footer">
+            <div class="fn-mkt-featured-author">
+              <div class="fn-mkt-featured-author-icon"><i class="bi bi-person"></i></div>
+              <div><strong>Finance Research Desk</strong><span>Market Intelligence</span></div>
+            </div>
+            <a href="404.html" class="fn-mkt-featured-read"><span>Read Full Insight</span><i
+                class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </article>
+      <!--- Featured Bottom --->
+      <div class="fn-mkt-featured-bottom">
+        <span>Featured Perspective</span>
+        <div class="fn-mkt-featured-bottom-line"></div>
+        <span><i class="bi bi-shield-check"></i> Informational content only</span>
+      </div>
+    </div>
+  </section>
+  <!--- Featured Insight Section End --->
+
+  <!--- Latest Market Insights Section Start --->
+  <section class="fn-mkt-latest" id="latest-insights">
+    <div class="fn-mkt-latest-bg">
+      <div class="fn-mkt-latest-grid"></div>
+      <div class="fn-mkt-latest-glow fn-mkt-latest-glow-one"></div>
+      <div class="fn-mkt-latest-glow fn-mkt-latest-glow-two"></div>
+    </div>
+    <div class="container fn-mkt-latest-container">
+      <!--- Latest Header --->
+      <div class="fn-mkt-latest-header">
+        <div class="fn-mkt-latest-heading">
+          <div class="fn-mkt-latest-label"><span></span><i class="bi bi-newspaper"></i> Latest Insights</div>
+          <h2 class="fn-mkt-latest-title">Ideas that help you <span>read the market.</span></h2>
+          <p class="fn-mkt-latest-description">Explore perspectives across markets, investments, economics, wealth,
+            business, and personal finance.</p>
+        </div>
+        <div class="fn-mkt-latest-count">
+          <strong id="fn-mkt-latest-count">9</strong>
+          <span>Insights Available</span>
+        </div>
+      </div>
+      <!--- Search And Filters --->
+      <div class="fn-mkt-latest-tools">
+        <div class="fn-mkt-latest-search">
+          <i class="bi bi-search"></i>
+          <input type="search" id="fn-mkt-latest-search" placeholder="Search market insights..." autocomplete="off"
+            aria-label="Search market insights">
+          <button type="button" id="fn-mkt-latest-clear" aria-label="Clear search"></button>
+        </div>
+        <div class="fn-mkt-latest-filters" role="tablist" aria-label="Insight categories">
+          <button type="button" class="fn-mkt-latest-filter active" data-category="all">All</button>
+          <button type="button" class="fn-mkt-latest-filter" data-category="markets">Markets</button>
+          <button type="button" class="fn-mkt-latest-filter" data-category="investments">Investments</button>
+          <button type="button" class="fn-mkt-latest-filter" data-category="economy">Economy</button>
+          <button type="button" class="fn-mkt-latest-filter" data-category="wealth">Wealth</button>
+          <button type="button" class="fn-mkt-latest-filter" data-category="business">Business</button>
+          <button type="button" class="fn-mkt-latest-filter" data-category="personal-finance">Personal Finance</button>
+        </div>
+      </div>
+      <!--- Search Status --->
+      <div class="fn-mkt-latest-status">
+        <span id="fn-mkt-latest-result-text">Showing all insights</span>
+        <button type="button" id="fn-mkt-latest-reset">Reset Filters</button>
+      </div>
+      <!--- Insights Grid --->
+      <div class="fn-mkt-latest-grid-list" id="fn-mkt-latest-list">
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="markets"
+          data-search="global markets market movements financial landscape market trends">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-01.webp" class="fn-mkt-latest-image"
+              alt="Global market trends and financial charts" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Markets</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Markets</span><span>8 min read</span></div>
+            <h3>What is shaping global markets right now?</h3>
+            <p>Explore the broader forces influencing market movements and investor sentiment.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 24, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="investments"
+          data-search="investment strategy portfolio long term investing opportunities">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-02.webp" class="fn-mkt-latest-image"
+              alt="Investment strategy and portfolio planning" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Investments</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Investments</span><span>6 min read</span></div>
+            <h3>Building an investment strategy around your goals.</h3>
+            <p>Understand how time horizon, priorities, and diversification can influence an investment approach.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 21, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="economy"
+          data-search="economy interest rates inflation economic growth rates">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-03.webp" class="fn-mkt-latest-image"
+              alt="Economic indicators and interest rate analysis" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Economy</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Economy</span><span>7 min read</span></div>
+            <h3>Why interest rates matter to the wider economy.</h3>
+            <p>See how changes in interest rates can influence borrowing, spending, investment, and growth.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 18, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="wealth"
+          data-search="wealth management financial planning wealth building long term">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-04.webp" class="fn-mkt-latest-image"
+              alt="Wealth management and financial planning" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Wealth</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Wealth</span><span>5 min read</span></div>
+            <h3>Creating a more intentional approach to wealth.</h3>
+            <p>Discover practical ways to connect financial resources with long-term priorities.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 15, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="business"
+          data-search="business finance cash flow growth company financial planning">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-05.webp" class="fn-mkt-latest-image"
+              alt="Business finance and growth planning" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Business</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Business</span><span>9 min read</span></div>
+            <h3>Financial signals every growing business should watch.</h3>
+            <p>Understand the financial indicators that can provide useful context for business decisions.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 12, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="personal-finance"
+          data-search="personal finance budgeting savings financial goals money planning">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-06.webp" class="fn-mkt-latest-image"
+              alt="Personal finance budgeting and savings" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Personal Finance</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Personal Finance</span><span>5 min read</span></div>
+            <h3>Small financial habits that support bigger goals.</h3>
+            <p>Look at practical ways to organize spending, saving, and financial priorities.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 09, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="markets"
+          data-search="market volatility risk market cycles investor sentiment">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-07.webp" class="fn-mkt-latest-image"
+              alt="Market volatility and investment risk" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Markets</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Markets</span><span>7 min read</span></div>
+            <h3>Understanding market volatility without the noise.</h3>
+            <p>Learn how to look beyond short-term movements and understand the context around volatility.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 06, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="investments"
+          data-search="diversification portfolio investment risk asset allocation">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-08.webp" class="fn-mkt-latest-image"
+              alt="Investment diversification and portfolio strategy" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Investments</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Investments</span><span>6 min read</span></div>
+            <h3>Why diversification remains part of the conversation.</h3>
+            <p>Explore how spreading exposure can be considered when building a broader investment strategy.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>September 03, 2026</span><i class="bi bi-dot"></i>
+            </div>
+          </div>
+        </article>
+        <!--- Insight Card --->
+        <article class="fn-mkt-latest-card" data-category="economy"
+          data-search="economic indicators employment inflation consumer economy outlook">
+          <a href="404.html" class="fn-mkt-latest-image-wrap">
+            <img src="assets/images/market-insight-09.webp" class="fn-mkt-latest-image"
+              alt="Economic indicators and financial outlook" loading="lazy">
+            <span class="fn-mkt-latest-image-category">Economy</span>
+            <span class="fn-mkt-latest-image-arrow"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="fn-mkt-latest-card-content">
+            <div class="fn-mkt-latest-meta"><span>Economy</span><span>8 min read</span></div>
+            <h3>Reading the economic signals behind the headlines.</h3>
+            <p>Understand how major economic indicators can provide context for broader financial trends.</p>
+            <div class="fn-mkt-latest-card-bottom"><span>August 30, 2026</span><i class="bi bi-dot"></i></div>
+          </div>
+        </article>
+      </div>
+      <!--- Empty State --->
+      <div class="fn-mkt-latest-empty" id="fn-mkt-latest-empty">
+        <div class="fn-mkt-latest-empty-icon"><i class="bi bi-search"></i></div>
+        <h3>No insights found</h3>
+        <p>Try a different search term or choose another category.</p>
+        <button type="button" id="fn-mkt-latest-empty-reset">View All Insights</button>
+      </div>
+      <!--- Latest Footer --->
+      <div class="fn-mkt-latest-footer">
+        <div class="fn-mkt-latest-footer-info">
+          <i class="bi bi-lightbulb"></i>
+          <span>Insights are provided for informational purposes and are not financial advice.</span>
+        </div>
+        <a href="404.html" class="fn-mkt-latest-footer-link"><span>Discuss Your Financial Goals</span><i
+            class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Latest Market Insights Section End --->
+
+  <!--- CTA Section Start --->
+  <section class="fn-abt-cta" id="fn-abt-cta">
+    <div class="fn-abt-cta-bg">
+      <div class="fn-abt-cta-grid"></div>
+      <div class="fn-abt-cta-glow fn-abt-cta-glow-one"></div>
+      <div class="fn-abt-cta-glow fn-abt-cta-glow-two"></div>
+      <div class="fn-abt-cta-line fn-abt-cta-line-one"></div>
+      <div class="fn-abt-cta-line fn-abt-cta-line-two"></div>
+    </div>
+    <div class="container fn-abt-cta-container">
+      <!--- CTA Content --->
+      <div class="fn-abt-cta-content">
+        <div class="fn-abt-cta-label"><span></span><i class="bi bi-arrow-up-right-circle"></i> Your Next Move</div>
+        <h2 class="fn-abt-cta-title">Make your next financial decision with <span>greater confidence.</span></h2>
+        <p class="fn-abt-cta-description">Explore our financial solutions, discover meaningful insights, and take the
+          next step toward a clearer financial future.</p>
+        <!--- CTA Actions --->
+        <div class="fn-abt-cta-actions">
+          <a href="404.html" class="fn-abt-cta-primary"><span>Let's Talk</span><i class="bi bi-arrow-up-right"></i></a>
+          <a href="404.html" class="fn-abt-cta-secondary"><span>Explore Services</span><i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <!--- CTA Visual --->
+      <div class="fn-abt-cta-visual">
+        <div class="fn-abt-cta-orbit fn-abt-cta-orbit-one"></div>
+        <div class="fn-abt-cta-orbit fn-abt-cta-orbit-two"></div>
+        <div class="fn-abt-cta-chart">
+          <svg viewBox="0 0 620 280" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="fnAbtCtaGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#16c784"></stop>
+                <stop offset="100%" stop-color="#5ee7b7"></stop>
+              </linearGradient>
+            </defs>
+            <g class="fn-abt-cta-chart-grid">
+              <line x1="0" y1="55" x2="620" y2="55"></line>
+              <line x1="0" y1="110" x2="620" y2="110"></line>
+              <line x1="0" y1="165" x2="620" y2="165"></line>
+              <line x1="0" y1="220" x2="620" y2="220"></line>
+            </g>
+            <path class="fn-abt-cta-chart-area"
+              d="M0 220 C65 215 90 190 145 198 C200 206 225 160 275 170 C325 180 350 135 400 145 C455 155 475 105 520 115 C565 125 585 78 620 48 L620 280 L0 280 Z">
+            </path>
+            <path class="fn-abt-cta-chart-line"
+              d="M0 220 C65 215 90 190 145 198 C200 206 225 160 275 170 C325 180 350 135 400 145 C455 155 475 105 520 115 C565 125 585 78 620 48">
+            </path>
+          </svg>
+        </div>
+        <!--- CTA Center --->
+        <div class="fn-abt-cta-center">
+          <div class="fn-abt-cta-center-ring"></div>
+          <div class="fn-abt-cta-center-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <span>FINANCE</span>
+          <small>Move Forward</small>
+        </div>
+        <!--- CTA Floating Cards --->
+        <div class="fn-abt-cta-card fn-abt-cta-card-one">
+          <span><i class="bi bi-lightbulb"></i></span>
+          <div><small>Financial Insight</small><strong>Clearer Direction</strong></div>
+        </div>
+        <div class="fn-abt-cta-card fn-abt-cta-card-two">
+          <span><i class="bi bi-shield-check"></i></span>
+          <div><small>Decision Focus</small><strong>Confidence</strong></div>
+        </div>
+      </div>
+      <!--- CTA Bottom --->
+      <div class="fn-abt-cta-bottom">
+        <div class="fn-abt-cta-bottom-item">
+          <i class="bi bi-bar-chart-line"></i>
+          <span>Understand</span>
+        </div>
+        <div class="fn-abt-cta-bottom-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="fn-abt-cta-bottom-item">
+          <i class="bi bi-compass"></i>
+          <span>Plan</span>
+        </div>
+        <div class="fn-abt-cta-bottom-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="fn-abt-cta-bottom-item">
+          <i class="bi bi-graph-up-arrow"></i>
+          <span>Grow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- CTA Section End --->
+
+
+  <!--- Footer --->
+  <div id="fn-footer-component"></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/market-insights.js"></script>
+  <script src="assets/js/all-hero.js"></script>
+</body>
+
+</html>
